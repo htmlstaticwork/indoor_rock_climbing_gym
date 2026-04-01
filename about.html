@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Summit Ascent Climbing Gym</title>
+    <meta name="description" content="Discover the story behind Summit Ascent. Our mission is to provide the highest quality indoor climbing experience for everyone.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+    <div id="preloader"><div class="loader-spinner"></div></div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-sticky py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-triangle-half me-2 fs-3 text-primary"></i>
+                <span class="fw-bold fs-4 text-uppercase letter-space">Summit Ascent</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-triangle-half me-2 fs-4 text-primary"></i>
+                        <h5 class="offcanvas-title fw-bold mb-0">SUMMIT ASCENT</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-center gap-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Home V1 — Classic</a></li>
+                                <li><a class="dropdown-item" href="home-v2.html">Home V2 — Interactive</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                        <!-- Toggles -->
+                        <li class="nav-item ms-lg-3">
+                            <div class="form-check form-switch p-0 m-0">
+                                <input class="form-check-input ms-0" type="checkbox" id="theme-toggle" role="switch">
+                                <label class="form-check-label ms-1 d-none d-lg-inline" for="theme-toggle">
+                                    <i class="bi bi-moon-stars"></i>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <button class="btn btn-sm btn-outline-secondary" id="rtl-toggle">RTL</button>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary btn-sm px-4" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- About Hero -->
+        <section class="section-padding bg-dark text-white position-relative overflow-hidden hero-about-section" style="min-height: 55vh; background: url('assets/images/climbing-bouldering-hq.png') center/cover no-repeat;">
+             <div class="hero-overlay" style="position: absolute; inset: 0; background: rgba(15, 23, 42, 0.85); z-index: 0;"></div>
+             <div class="container h-100 d-flex align-items-center justify-content-center position-relative" style="z-index: 1;">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-2 fw-bold mb-4 ls-1">OUR STORY</h1>
+                    <p class="lead opacity-75 mx-auto mb-0" style="max-width: 800px;">Born from a passion for the vertical world. We don't just build walls; we build a community that defies gravity.</p>
+                </div>
+            </div>
+            <!-- Background Watermark -->
+            <div class="position-absolute top-50 start-50 translate-middle w-100 opacity-05 pe-none">
+                <h2 class="display-1 fw-bold text-uppercase text-center" style="font-size: 15rem; letter-spacing: 50px;">ASCENT</h2>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <img src="assets/images/gym-training-hq.png" class="img-fluid rounded-4 shadow" alt="Our Gym">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold mb-4">THE SUMMIT MISSION</h2>
+                        <p class="text-muted mb-4">Founded in 2024, Summit Ascent was created to provide a world-class climbing experience for climbers of all skill levels. We believe that climbing is more than just a sport; it is a way to push boundaries, build mental resilience, and foster deep connections.</p>
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-shield-check text-primary fs-3 me-3"></i>
+                                    <h5 class="fw-bold mb-0">Safety First</h5>
+                                </div>
+                                <p class="small text-muted">Certified instructors and rigorous equipment checks daily.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-people-fill text-primary fs-3 me-3"></i>
+                                    <h5 class="fw-bold mb-0">Inclusivity</h5>
+                                </div>
+                                <p class="small text-muted">Creating a space where everyone feels welcome on the wall.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">MEET THE EXPERTS</h2>
+                    <p class="text-muted">Nationally ranked athletes and certified routesetters.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card-premium text-center">
+                            <div class="mb-4">
+                                <img src="assets/images/team-alex.png" alt="Alex Rivet" class="img-fluid rounded-circle border border-primary p-1" style="width: 150px; height: 150px; object-fit: cover;">
+                            </div>
+                            <h4 class="fw-bold mb-1">Alex Rivet</h4>
+                            <p class="text-primary small text-uppercase fw-bold mb-3">Head Routesetter</p>
+                            <p class="text-muted small">15 years of experience setting for international competitions.</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-premium text-center scale-up-hover">
+                            <div class="mb-4">
+                                <img src="assets/images/team-sarah.png" alt="Sarah Peaks" class="img-fluid rounded-circle border border-primary p-1" style="width: 150px; height: 150px; object-fit: cover;">
+                            </div>
+                            <h4 class="fw-bold mb-1">Sarah Peaks</h4>
+                            <p class="text-primary small text-uppercase fw-bold mb-3">Lead Instructor</p>
+                            <p class="text-muted small">Specializes in elite technique and mental conditioning for lead climbing.</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-premium text-center">
+                            <div class="mb-4">
+                                <img src="assets/images/team-jon.png" alt="Jon Crag" class="img-fluid rounded-circle border border-primary p-1" style="width: 150px; height: 150px; object-fit: cover;">
+                            </div>
+                            <h4 class="fw-bold mb-1">Jon Crag</h4>
+                            <p class="text-primary small text-uppercase fw-bold mb-3">Operations Manager</p>
+                            <p class="text-muted small">Ensuring every guest has a seamless and safe experience at Summit.</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Stats -->
+        <section class="section-padding bg-dark-section text-white">
+            <div class="container text-center">
+                <div class="row g-4">
+                    <div class="col-6 col-md-3">
+                        <h2 class="display-4 fw-bold">2024</h2>
+                        <p class="text-uppercase small ls-1 opacity-75">Founded</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h2 class="display-4 fw-bold">50+</h2>
+                        <p class="text-uppercase small ls-1 opacity-75">Staff Members</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h2 class="display-4 fw-bold">12K</h2>
+                        <p class="text-uppercase small ls-1 opacity-75">Active Members</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h2 class="display-4 fw-bold">400</h2>
+                        <p class="text-uppercase small ls-1 opacity-75">Weekly Routes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Digital Services Section -->
+        <section class="section-padding bg-dark-section text-white" id="digital-tools">
+            <div class="container text-center mb-5">
+                <span class="badge bg-primary px-3 py-2 text-uppercase mb-3">Online Ecosystem</span>
+                <h2 class="display-4 fw-bold text-uppercase">DIGITAL SUMMIT</h2>
+                <p class="lead opacity-75 mx-auto" style="max-width: 700px;">Stay connected to the wall from anywhere with our integrated digital tools and athlete resources.</p>
+            </div>
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Performance Dashboard -->
+                    <div class="col-lg-4">
+                        <div class="workshop-card h-100 p-4 rounded-4">
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-3 text-primary">
+                                    <i class="bi bi-speedometer2 fs-2"></i>
+                                </div>
+                                <span class="badge bg-success bg-opacity-10 text-success align-self-start py-2">LIVE DATA</span>
+                            </div>
+                            <h4 class="fw-bold ls-1">PERFORMANCE DASHBOARD</h4>
+                            <p class="small mb-4">Track your weekly climbing statistics, monitor real-time gym occupancy, and set personal progression goals directly from our website.</p>
+                            <ul class="list-unstyled small mb-4">
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Real-time Occupancy</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Personal Best Logging</li>
+                                <li><i class="bi bi-check2 text-primary me-2"></i> Route Completion Stats</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="login.html" class="btn btn-outline-light w-100">View My Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video Beta Library -->
+                    <div class="col-lg-4">
+                        <div class="workshop-card h-100 p-4 rounded-4">
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-3 text-primary">
+                                    <i class="bi bi-play-circle fs-2"></i>
+                                </div>
+                                <span class="badge bg-info bg-opacity-10 text-info align-self-start py-2">WEEKLY RESET</span>
+                            </div>
+                            <h4 class="fw-bold ls-1">VIDEO BETA LIBRARY</h4>
+                            <p class="small mb-4">Stuck on a project? Access our high-definition video library featuring pro beta and movement solutions for every route in the facility.</p>
+                            <ul class="list-unstyled small mb-4">
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Pro Solver Walkthroughs</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Movement Technique Beta</li>
+                                <li><i class="bi bi-check2 text-primary me-2"></i> New Problems Every Week</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-outline-light w-100">Watch Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Summit App -->
+                    <div class="col-lg-4">
+                        <div class="workshop-card workshop-card--highlight h-100 p-4 rounded-4">
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-3 text-primary">
+                                    <i class="bi bi-phone-vibrate fs-2"></i>
+                                </div>
+                                <span class="badge bg-primary bg-opacity-10 text-primary align-self-start py-2">IOS & ANDROID</span>
+                            </div>
+                            <h4 class="fw-bold ls-1">SUMMIT CONNECT APP</h4>
+                            <p class="small mb-4">Find climbing partners, digital waivers, and class bookings in one place. Our mobile app is the ultimate gym companion.</p>
+                            <ul class="list-unstyled small mb-4">
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Partner Finder Portal</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Instant Class Booking</li>
+                                <li><i class="bi bi-check2 text-primary me-2"></i> Digital Waiver Access</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary w-100">Download App</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Basecamp Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <span class="badge bg-primary px-3 py-2 text-uppercase mb-3">The Virtual Ascent</span>
+                        <h2 class="display-5 fw-bold mb-4">OUR DIGITAL BASECAMP</h2>
+                        <p class="text-muted mb-4">Summit Ascent isn't just a place to climb; it’s a living digital ecosystem. Whether you’re tracking your vertical gain or booking a private coaching session, our web platform is designed to be as responsive and reliable as the gear you trust on the wall.</p>
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-cpu text-primary fs-3 me-3"></i>
+                                    <h5 class="fw-bold mb-0">Modern Stack</h5>
+                                </div>
+                                <p class="small text-muted">Built on lightning-fast technologies for real-time gym data.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-universal-access text-primary fs-3 me-3"></i>
+                                    <h5 class="fw-bold mb-0">Accessibility</h5>
+                                </div>
+                                <p class="small text-muted">Designed for all climbers, with high-contrast visuals and intuitive UX.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="position-relative p-3">
+                            <div class="bg-primary bg-opacity-10 position-absolute top-50 start-50 translate-middle rounded-circle" style="width: 120%; height: 120%; z-index: -1;"></div>
+                            <img src="assets/images/digital-mockup.png" class="img-fluid rounded-4 shadow-lg" alt="Digital Basecamp Mockup" style="max-width: 90%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i class="bi bi-triangle-half me-2 fs-3 text-primary"></i>
+                        <span class="fw-bold fs-4 text-uppercase">Summit Ascent</span>
+                    </a>
+                    <p class="text-muted pe-lg-5 small">Redefining indoor climbing through premium design, passionate community, and world-class coaching. Founded 2024.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="footer-social" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-4 footer-title">Company</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Facilities</a></li>
+                        <li><a href="blog.html">Community</a></li>
+                        <li><a href="pricing.html">Memberships</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-4 footer-title">Support</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Safety Rules</a></li>
+                        <li><a href="#">Waiver Form</a></li>
+                        <li><a href="coming-soon.html">Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4 footer-title">Stay Vertical</h5>
+                    <p class="text-muted small mb-4">Get training tips, event invites and beta drops directly in your inbox. Zero spam, promise.</p>
+                    <form class="footer-newsletter position-relative" id="newsletter-form">
+                        <input type="email" class="form-control py-3 pe-5" placeholder="Your Email" required>
+                        <button class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-1 px-3 py-2" type="submit" aria-label="Subscribe">
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </form>
+                    <div class="footer-contact mt-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-geo-alt text-primary"></i>
+                            <small class="text-muted">123 Vertical Way, Climb City, ST 12345</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-telephone text-primary"></i>
+                            <small class="text-muted">+1 (555) 867-5309</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-envelope text-primary"></i>
+                            <small class="text-muted">hello@summitascent.com</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-muted small mb-0">© 2026 Summit Ascent. Built for the peak. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                        <a href="#" class="text-muted small me-3">Privacy Policy</a>
+                        <a href="#" class="text-muted small me-3">Terms of Service</a>
+                        <a href="#" class="text-muted small">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

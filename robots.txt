@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://summitascent.com/sitemap.xml

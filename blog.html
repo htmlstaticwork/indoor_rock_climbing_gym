@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Community | Summit Ascent News</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+    <div id="preloader"><div class="loader-spinner"></div></div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-sticky py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-triangle-half me-2 fs-3 text-primary"></i>
+                <span class="fw-bold fs-4 text-uppercase letter-space">Summit Ascent</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-triangle-half me-2 fs-4 text-primary"></i>
+                        <h5 class="offcanvas-title fw-bold mb-0">SUMMIT ASCENT</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-center gap-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Home V1 — Classic</a></li>
+                                <li><a class="dropdown-item" href="home-v2.html">Home V2 — Interactive</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                        <!-- Toggles -->
+                        <li class="nav-item ms-lg-3">
+                            <div class="form-check form-switch p-0 m-0">
+                                <input class="form-check-input ms-0" type="checkbox" id="theme-toggle" role="switch">
+                                <label class="form-check-label ms-1 d-none d-lg-inline" for="theme-toggle">
+                                    <i class="bi bi-moon-stars"></i>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <button class="btn btn-sm btn-outline-secondary" id="rtl-toggle">RTL</button>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary btn-sm px-4" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Enhanced Blog Hero -->
+        <section class="section-padding blog-hero position-relative overflow-hidden">
+            <div class="container text-center py-5 position-relative z-1">
+                <span class="badge bg-primary px-3 py-2 text-uppercase mb-3 ls-2">The Beta Drop</span>
+                <h1 class="display-2 fw-bold text-uppercase mb-3">CRAG NEWS</h1>
+                <p class="text-muted max-w-600 mx-auto fs-5">Your source for training tips, route reports, and the pulse of the climbing community.</p>
+            </div>
+            <!-- Background Watermark -->
+            <div class="position-absolute top-50 start-50 translate-middle w-100 opacity-05 pe-none">
+                <h2 class="display-1 fw-bold text-uppercase text-center" style="font-size: 15rem; letter-spacing: 50px;">ASCENT</h2>
+            </div>
+        </section>
+
+        <!-- Section 2: Featured Story (NEW) -->
+        <section class="section-padding pt-0">
+            <div class="container">
+                <div class="card-premium p-0 border-0 overflow-hidden shadow-lg">
+                    <div class="row g-0">
+                        <div class="col-lg-7">
+                            <div class="h-100 min-h-400 position-relative">
+                                <img src="assets/images/v2-interior.png" class="w-100 h-100 object-fit-cover" alt="Featured Story">
+                                <div class="position-absolute top-0 start-0 p-4">
+                                    <span class="badge bg-accent px-3 py-2 text-dark fw-bold">WEEKLY FEATURE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-flex align-items-center">
+                            <div class="p-5">
+                                <span class="text-primary fw-bold text-uppercase ls-2 small mb-3 d-block">PRO TIPS</span>
+                                <h2 class="display-6 fw-bold mb-4">THE ART OF THE DYNAMIQ: MASTERING EXPLOSIVE MOVEMENT</h2>
+                                <p class="text-muted mb-4 fs-5">Unlock the secrets to sticking those long-reach moves. We break down the physics and technique of the 'Dyno'.</p>
+                                <div class="d-flex align-items-center gap-3 mb-5">
+                                    <img src="https://ui-avatars.com/api/?name=Alex+Honn&background=3b82f6&color=fff" class="rounded-circle" width="40" alt="Author">
+                                    <div>
+                                        <p class="mb-0 fw-bold small">Alex Honn</p>
+                                        <small class="text-muted">Head Coach & Lead Setter</small>
+                                    </div>
+                                </div>
+                                <a href="blog-details.html" class="btn btn-primary">READ FULL STORY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Topic Explorer (NEW) -->
+        <section class="section-padding bg-dark-section">
+            <div class="container">
+                <div class="row align-items-end mb-5">
+                    <div class="col-md-7">
+                        <h2 class="display-5 fw-bold text-uppercase mb-0">CHOOSE YOUR PATH</h2>
+                        <p class="text-muted mt-2">Filter the noise and find exactly what you need to level up.</p>
+                    </div>
+                    <div class="col-md-5 text-md-end">
+                        <a href="#" class="btn btn-outline-light btn-sm text-uppercase ls-1">View All Topics</a>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="topic-card text-decoration-none">
+                            <div class="card-premium text-center p-5 bg-white-10 backdrop-blur border-white-10 h-100 transform-hover">
+                                <i class="bi bi-gear-fill display-4 text-primary mb-3 d-block"></i>
+                                <h4 class="h5 fw-bold mb-0 text-white">GEAR</h4>
+                                <span class="badge bg-primary-10 text-primary mt-2">12 POSTS</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="topic-card text-decoration-none">
+                            <div class="card-premium text-center p-5 bg-white-10 backdrop-blur border-white-10 h-100 transform-hover">
+                                <i class="bi bi-lightning-charge-fill display-4 text-accent mb-3 d-block"></i>
+                                <h4 class="h5 fw-bold mb-0 text-white">TRAINING</h4>
+                                <span class="badge bg-accent-10 text-accent mt-2">24 POSTS</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="topic-card text-decoration-none">
+                            <div class="card-premium text-center p-5 bg-white-10 backdrop-blur border-white-10 h-100 transform-hover">
+                                <i class="bi bi-people-fill display-4 text-info mb-3 d-block"></i>
+                                <h4 class="h5 fw-bold mb-0 text-white">COMMUNITY</h4>
+                                <span class="badge bg-info-10 text-info mt-2">18 POSTS</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="topic-card text-decoration-none">
+                            <div class="card-premium text-center p-5 bg-white-10 backdrop-blur border-white-10 h-100 transform-hover">
+                                <i class="bi bi-geo-alt-fill display-4 text-success mb-3 d-block"></i>
+                                <h4 class="h5 fw-bold mb-0 text-white">REPORTS</h4>
+                                <span class="badge bg-success-10 text-success mt-2">9 POSTS</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Refined Article Grid -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-title mb-5">
+                    <span class="text-primary fw-bold text-uppercase ls-2 small mb-2 d-block">LATEST ARTICLES</span>
+                    <h2 class="display-6 fw-bold text-uppercase">RECENT UPDATES</h2>
+                </div>
+                <div class="row g-4">
+                    <!-- Post 1 -->
+                    <div class="col-lg-4">
+                        <article class="card-premium h-100 overflow-hidden p-0 border-0 shadow-sm transform-hover">
+                            <div class="position-relative overflow-hidden">
+                                <img src="assets/images/gym-training-hq.png" class="w-100" height="250" style="object-fit: cover;" alt="Blog Post">
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <span class="badge bg-primary px-2 py-1 small text-uppercase">Training</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 fw-bold mb-3"><a href="blog-details.html" class="text-decoration-none text-dark">5 Ways to Increase Your Grip Strength</a></h3>
+                                <p class="text-muted small mb-4">Unlock your true potential with these proven exercises for fingers and forearms.</p>
+                                <hr class="opacity-10">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="small text-muted"><i class="bi bi-calendar-event me-1"></i> MAR 28, 2024</span>
+                                    <a href="blog-details.html" class="text-primary small fw-bold text-decoration-none">READ MORE <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="col-lg-4">
+                        <article class="card-premium h-100 overflow-hidden p-0 border-0 shadow-sm transform-hover">
+                            <div class="position-relative overflow-hidden bg-dark">
+                                <img src="assets/images/climbing-bouldering-hq.png" class="w-100" height="250" style="object-fit: cover; opacity: 0.8;" alt="Community">
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <span class="badge bg-primary px-2 py-1 small text-uppercase">Community</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 fw-bold mb-3"><a href="blog-details.html" class="text-decoration-none text-dark">Summer Bouldering League Open!</a></h3>
+                                <p class="text-muted small mb-4">Join our most awaited competition of the year. All levels and categories are welcome.</p>
+                                <hr class="opacity-10">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="small text-muted"><i class="bi bi-calendar-event me-1"></i> MAR 25, 2024</span>
+                                    <a href="blog-details.html" class="text-primary small fw-bold text-decoration-none">READ MORE <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="col-lg-4">
+                        <article class="card-premium h-100 overflow-hidden p-0 border-0 shadow-sm transform-hover">
+                            <div class="position-relative overflow-hidden">
+                                <img src="assets/images/climbing-lead-hq.png" class="w-100" height="250" style="object-fit: cover;" alt="Gear">
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <span class="badge bg-primary px-2 py-1 small text-uppercase">Gear</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 fw-bold mb-3"><a href="blog-details.html" class="text-decoration-none text-dark">Top 5 Climbing Shoes for 2024</a></h3>
+                                <p class="text-muted small mb-4">Which shoe is right for your foot shape? Find the perfect balance between comfort and performance.</p>
+                                <hr class="opacity-10">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="small text-muted"><i class="bi bi-calendar-event me-1"></i> MAR 20, 2024</span>
+                                    <a href="blog-details.html" class="text-primary small fw-bold text-decoration-none">READ MORE <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <nav class="mt-5 pt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link border-0 fw-bold" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link border-0 fw-bold px-4 rounded-pill mx-1" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link border-0 fw-bold px-4 rounded-pill mx-1 shadow-sm" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link border-0 fw-bold" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Section 5: Community Spotlight (NEW) -->
+        <section class="section-padding bg-light position-relative">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="pe-lg-5">
+                            <h2 class="display-5 fw-bold text-uppercase mb-4">JOIN THE ASCENT COMMUNITY</h2>
+                            <p class="text-muted fs-5 mb-5">Don't miss a single drop. Get exclusive training programs, early event access, and beta from our top routesetters delivered straight to your inbox.</p>
+                            <div class="d-flex flex-column gap-3 mb-5">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-primary-10 text-primary p-2 rounded-circle"><i class="bi bi-check2"></i></div>
+                                    <span class="fw-medium">Exclusive Member-only Beta Drops</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-primary-10 text-primary p-2 rounded-circle"><i class="bi bi-check2"></i></div>
+                                    <span class="fw-medium">10% Early Bird Discount on Competitions</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-primary-10 text-primary p-2 rounded-circle"><i class="bi bi-check2"></i></div>
+                                    <span class="fw-medium">Monthly Training Plans by Alex Honn</span>
+                                </div>
+                            </div>
+                            <form class="newsletter-form-large">
+                                <div class="input-group">
+                                    <input type="email" class="form-control form-control-lg border-0 shadow-sm" placeholder="Elevate your inbox (Email address)" required>
+                                    <button class="btn btn-primary px-4" type="submit">SUBSCRIBE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-5 mt-lg-0">
+                        <div class="position-relative">
+                            <img src="assets/images/v2-training.png" class="w-100 rounded-lg shadow-2xl" alt="Community Spotlight">
+                            <!-- Floating Card -->
+                            <div class="position-absolute bottom-0 start-0 m-4 p-4 bg-white shadow-lg rounded-lg max-w-300 backdrop-blur bg-opacity-90">
+                                <p class="italic text-muted mb-3 small">"The community here is what keeps me pushing. It's more than a gym, it's a family."</p>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="fw-bold small">— Sarah J., Member since 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer-section section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i class="bi bi-triangle-half me-2 fs-3 text-primary"></i>
+                        <span class="fw-bold fs-4 text-uppercase">Summit Ascent</span>
+                    </a>
+                    <p class="text-muted pe-lg-5 small">Redefining indoor climbing through premium design, passionate community, and world-class coaching. Founded 2024.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="footer-social" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-4 footer-title">Company</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Facilities</a></li>
+                        <li><a href="blog.html">Community</a></li>
+                        <li><a href="pricing.html">Memberships</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-4 footer-title">Support</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Safety Rules</a></li>
+                        <li><a href="#">Waiver Form</a></li>
+                        <li><a href="coming-soon.html">Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4 footer-title">Stay Vertical</h5>
+                    <p class="text-muted small mb-4">Get training tips, event invites and beta drops directly in your inbox. Zero spam, promise.</p>
+                    <form class="footer-newsletter position-relative" id="newsletter-form">
+                        <input type="email" class="form-control py-3 pe-5" placeholder="Your Email" required>
+                        <button class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-1 px-3 py-2" type="submit" aria-label="Subscribe">
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </form>
+                    <div class="footer-contact mt-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-geo-alt text-primary"></i>
+                            <small class="text-muted">123 Vertical Way, Climb City, ST 12345</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-telephone text-primary"></i>
+                            <small class="text-muted">+1 (555) 867-5309</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-envelope text-primary"></i>
+                            <small class="text-muted">hello@summitascent.com</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-muted small mb-0">© 2026 Summit Ascent. Built for the peak. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                        <a href="#" class="text-muted small me-3">Privacy Policy</a>
+                        <a href="#" class="text-muted small me-3">Terms of Service</a>
+                        <a href="#" class="text-muted small">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+/*
+ ====================================
+ HOME v2 — MODERN MINIMALIST
+ Summit Ascent — Chalk & Stone
+ ====================================
+*/
+
+/* 1. HERO v2 */
+.hero-v2 {
+    height: 100vh;
+    background: #020617;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-v2-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    filter: grayscale(20%) contrast(110%);
+}
+
+.hero-v2-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.1), transparent 70%);
+}
+
+.hero-v2-content {
+    position: relative;
+    z-index: 5;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-v2-title {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 0.95;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+/* 2. LIVE INSIGHTS */
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.insight-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.insight-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.live-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(34, 197, 94, 0.1);
+    color: #166534;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* 3. THE JOURNEY (Steps) */
+.journey-step {
+    position: relative;
+    padding: 40px 32px;
+    border-radius: 24px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.step-number {
+    position: absolute;
+    bottom: -16px;
+    right: -8px;
+    font-size: 7rem;
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-color);
+    opacity: 0.06;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.journey-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.journey-step:hover .journey-icon {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.journey-icon i {
+    font-size: 1.6rem;
+    line-height: 1;
+    display: block;
+}
+
+.journey-step h4 { margin-bottom: 0; }
+.journey-step p  { margin-bottom: 0; color: var(--text-muted); }
+
+/* 4. WALL OF SENDS (Leaderboard) */
+.leaderboard-table {
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    color: var(--text-dark); /* Prevent white text inheritance from dark section parent */
+}
+
+.leader-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 100px 120px;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+}
+
+.leader-row:last-child { border-bottom: none; }
+
+/* Leaderboard header row — custom class replacing bg-light */
+.leader-header {
+    background: #f1f5f9;
+    color: #64748b;
+    border-radius: 12px 12px 0 0;
+}
+
+[data-theme="dark"] .leader-header {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.leader-rank {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+.leader-name { font-weight: 700; color: var(--text-dark); }
+.leader-points { font-weight: 600; color: #10b981; }
+
+/* 5. VAULT GALLERY */
+.gallery-masonry {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+@media (max-width: 992px) { .gallery-masonry { column-count: 2; } }
+@media (max-width: 576px) { .gallery-masonry { column-count: 1; } }
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-img {
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.08);
+}
+
+/* 6. FAQ ACCORDION */
+.faq-v2 .accordion-item {
+    background: transparent;
+    border: none;
+    margin-bottom: 12px;
+}
+
+.faq-v2 .accordion-button {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px !important;
+    padding: 20px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.faq-v2 .accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+.faq-v2 .accordion-body {
+    padding: 20px;
+    color: var(--text-muted);
+}
+
+/* DARK MODE OVERRIDES V2 */
+[data-theme="dark"] .insight-card,
+[data-theme="dark"] .journey-step,
+[data-theme="dark"] .leaderboard-table,
+[data-theme="dark"] .faq-v2 .accordion-button {
+    background: #0f172a;
+    border-color: #1e293b;
+    color: #fff;
+}
+
+[data-theme="dark"] .journey-step p {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .journey-icon {
+    background: rgba(59, 130, 246, 0.15);
+}
+
+/* Journey step card hover */
+.journey-step {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.journey-step:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(59, 130, 246, 0.12);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .live-indicator {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+}
+
+[data-theme="dark"] .leader-name { color: #fff; }
+
+/* Fix individual data rows in dark mode */
+[data-theme="dark"] .leader-row {
+    border-bottom-color: rgba(255, 255, 255, 0.06);
+    color: #f1f5f9;
+}

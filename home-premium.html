@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Membership | Summit Ascent Elite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div id="preloader"><div class="loader-spinner"></div></div>
+
+    <!-- Header (Same as Index) -->
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-sticky py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-triangle-half me-2 fs-3 text-primary"></i>
+                <span class="fw-bold fs-4 text-uppercase letter-space">Summit Ascent</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-triangle-half me-2 fs-4 text-primary"></i>
+                        <h5 class="offcanvas-title fw-bold mb-0">SUMMIT ASCENT</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-center gap-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Home V1 — Classic</a></li>
+                                <li><a class="dropdown-item" href="home-v2.html">Home V2 — Interactive</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                        <!-- Toggles -->
+                        <li class="nav-item ms-lg-3">
+                            <div class="form-check form-switch p-0 m-0">
+                                <input class="form-check-input ms-0" type="checkbox" id="theme-toggle" role="switch">
+                                <label class="form-check-label ms-1 d-none d-lg-inline" for="theme-toggle">
+                                    <i class="bi bi-moon-stars"></i>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <button class="btn btn-sm btn-outline-secondary" id="rtl-toggle">RTL</button>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary btn-sm px-4" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Premium Hero -->
+        <section class="section-padding bg-light text-center">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <span class="badge bg-primary px-3 py-2 text-uppercase mb-3">Elite Experience</span>
+                        <h1 class="display-2 fw-bold text-uppercase mb-4 ls-1">THE ELITE <br><span class="text-primary italic">ASCENT.</span></h1>
+                        <p class="lead text-muted mb-5 mx-auto" style="max-width: 800px;">A premium membership designed for those who live for the vertically inclined. 24/7 access, private lounges, and expert technique analysis.</p>
+                        
+                        <div class="row g-4 mb-5 justify-content-center">
+                            <div class="col-6 col-md-3">
+                                <h4 class="fw-bold mb-0">24/7</h4>
+                                <p class="small text-muted text-uppercase mb-0">Member Access</p>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <h4 class="fw-bold mb-0">∞</h4>
+                                <p class="small text-muted text-uppercase mb-0">Guest Passes</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="pricing.html" class="btn btn-primary btn-lg px-5">Go Premium</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Optional image row or background -->
+            <div class="container mt-4">
+                <div class="rounded-4 overflow-hidden shadow-lg transform-hover-3d position-relative mx-auto" style="max-width: 900px;">
+                    <img src="assets/images/hero.png" class="img-fluid w-100" alt="Premium Training">
+                    <div class="position-absolute bottom-0 start-0 bg-white p-4 m-4 rounded shadow d-none d-md-block border-start border-primary border-4 text-start">
+                        <h5 class="fw-bold mb-1">Weekly Setting</h5>
+                            <p class="small text-muted mb-0">15-20 New Lead Routes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Features Grid -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="row g-0 border shadow rounded-4 overflow-hidden">
+                    <div class="col-lg-4 p-5 bg-dark-section">
+                        <h2 class="text-white display-6 fw-bold mb-4">MEMBER EXCLUSIVES</h2>
+                        <ul class="list-unstyled text-white opacity-75">
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-star-fill text-primary me-3"></i> Private Locker Room</li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-star-fill text-primary me-3"></i> Sauna & Cold Plunge</li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-star-fill text-primary me-3"></i> 20% Off Retail Store</li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-star-fill text-primary me-3"></i> Early Access Routes</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8 p-5 bg-white">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="d-flex mb-4">
+                                    <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary me-3">
+                                        <i class="bi bi-award fs-3"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Elite Training</h5>
+                                        <p class="text-muted small">One-on-one sessions with nationally ranked lead climbers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex mb-4">
+                                    <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary me-3">
+                                        <i class="bi bi-speedometer2 fs-3"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Bio-Metrics</h5>
+                                        <p class="text-muted small">AI-powered grip strength and movement analysis tools.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Testimonials -->
+        <section class="section-padding bg-light">
+            <div class="container text-center">
+                <i class="bi bi-quote display-1 text-primary opacity-25"></i>
+                <div id="premiumCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h3 class="fw-light mb-4 px-lg-5">"Summit Ascent isn't just a gym; it's a second home. The premium facilities allow me to train at an international level while balancing a full-time career."</h3>
+                            <p class="fw-bold text-uppercase small ls-2">— Marc Stone, Lead Pro</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3 class="fw-light mb-4 px-lg-5">"The 24/7 access is a game-changer. I love bouldering at 3 AM when the music is low and the focus is high."</h3>
+                            <p class="fw-bold text-uppercase small ls-2">— Sarah V., Bouldering Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="section-padding bg-dark-section text-white border-top mt-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center text-white mb-4" href="#">
+                        <i class="bi bi-triangle-half me-2 fs-3 text-primary"></i>
+                        <span class="fw-bold fs-4 text-uppercase">Summit Ascent</span>
+                    </a>
+                    <p class="opacity-75 pe-lg-5">Redefining indoor climbing through premium design and passionate community support. Founded 2024.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-4 text-uppercase small ls-1">Company</h5>
+                    <ul class="list-unstyled opacity-75">
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Facilities</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-white text-decoration-none">Memberships</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-4 text-uppercase small ls-1">Legal</h5>
+                    <ul class="list-unstyled opacity-75">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4 text-uppercase small ls-1">Newsletter</h5>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Email">
+                        <button class="btn btn-primary">Join</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

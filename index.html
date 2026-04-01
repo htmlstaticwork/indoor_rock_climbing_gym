@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summit Ascent | Premium Indoor Rock Climbing Gym</title>
+    <meta name="description" content="Experience the ultimate indoor climbing at Summit Ascent. Bouldering, top-rope, and lead climbing for all levels. Join our community today!">
+
+    <!-- SEO & Favicon -->
+    <link rel="canonical" href="https://summitascent.com/">
+    <meta property="og:title" content="Summit Ascent | Premium Indoor Rock Climbing Gym">
+    <meta property="og:description" content="Scale new heights with our state-of-the-art facilities and expert-led classes.">
+    <meta property="og:image" content="assets/images/hero.png">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Summit Ascent",
+      "image": "assets/images/hero.png",
+      "description": "Premium indoor climbing gym featuring bouldering, lead climbing, and professional training.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Vertical Way",
+        "addressLocality": "Climb City",
+        "addressRegion": "ST",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <i class="bi bi-triangle-half preloader-icon"></i>
+            <p class="preloader-text">SUMMIT ASCENT</p>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-sticky py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-triangle-half me-2 fs-3 text-primary"></i>
+                <span class="fw-bold fs-4 text-uppercase letter-space">Summit Ascent</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-triangle-half me-2 fs-4 text-primary"></i>
+                        <h5 class="offcanvas-title fw-bold mb-0">SUMMIT ASCENT</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-center gap-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Home V1 — Classic</a></li>
+                                <li><a class="dropdown-item" href="home-v2.html">Home V2 — Interactive</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                        <!-- Toggles -->
+                        <li class="nav-item ms-lg-3">
+                            <div class="form-check form-switch p-0 m-0">
+                                <input class="form-check-input ms-0" type="checkbox" id="theme-toggle" role="switch">
+                                <label class="form-check-label ms-1 d-none d-lg-inline" for="theme-toggle">
+                                    <i class="bi bi-moon-stars"></i>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <button class="btn btn-sm btn-outline-secondary" id="rtl-toggle">RTL</button>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary btn-sm px-4" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =============================================
+         SECTION 1: HERO
+    ============================================= -->
+    <section class="hero-section position-relative overflow-hidden" id="hero">
+        <img src="assets/images/hero.png" class="hero-bg-img" alt="Elite Climber at Summit Ascent">
+        <div class="hero-overlay"></div>
+
+        <!-- Animated particles -->
+        <div class="hero-particles">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </div>
+
+        <div class="container h-100 d-flex align-items-center position-relative" style="z-index:2;">
+            <div class="col-lg-10 mx-auto text-center text-white">
+                <div class="hero-badge d-inline-flex align-items-center gap-2 mb-4">
+                    <span class="badge-dot"></span>
+                    <span class="text-uppercase small fw-semibold ls-2">Now Open · 7 Days a Week</span>
+                </div>
+                <h1 class="display-2 fw-bold mb-4 hero-headline">THE HIGHEST POINT<br><span class="text-accent">OF YOUR PASSION.</span></h1>
+                <p class="lead mb-5 opacity-75 hero-sub mx-auto" style="max-width: 700px;">Join the premiere climbing community. Over 20,000 sq ft of world-class bouldering, top-rope, and lead walls designed by masters.</p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
+                    <a href="pricing.html" class="btn btn-primary btn-lg px-5" id="hero-cta-join">Join Now</a>
+                    <a href="services.html" class="btn btn-outline-light btn-lg px-5" id="hero-cta-explore">Explore Gym</a>
+                </div>
+                <!-- Hero trust row -->
+                <div class="hero-trust d-flex flex-wrap gap-4 mt-5 justify-content-center">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-star-fill text-accent"></i>
+                        <span class="small opacity-75">4.9 / 5 Rating</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-people-fill text-accent"></i>
+                        <span class="small opacity-75">5,000+ Members</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-award-fill text-accent"></i>
+                        <span class="small opacity-75">#1 Gym in the City</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll cue -->
+        <div class="scroll-cue">
+            <i class="bi bi-chevron-double-down"></i>
+        </div>
+    </section>
+
+    <main>
+
+    <!-- =============================================
+         SECTION 2: STATS / SOCIAL PROOF
+    ============================================= -->
+    <section class="stats-section section-padding" id="stats">
+        <div class="container">
+            <div class="row g-0 stats-grid">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item text-center p-4">
+                        <i class="bi bi-border-all fs-2 text-primary mb-3 d-block"></i>
+                        <div class="stat-number" data-count="20000">0</div>
+                        <p class="stat-label">Sq. Ft. Area</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item text-center p-4">
+                        <i class="bi bi-people fs-2 text-primary mb-3 d-block"></i>
+                        <div class="stat-number" data-count="150" data-suffix="+">0</div>
+                        <p class="stat-label">Weekly Classes</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item text-center p-4">
+                        <i class="bi bi-trophy fs-2 text-primary mb-3 d-block"></i>
+                        <div class="stat-number" data-count="400" data-suffix="+">0</div>
+                        <p class="stat-label">Route Problems</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item text-center p-4">
+                        <i class="bi bi-patch-check fs-2 text-primary mb-3 d-block"></i>
+                        <div class="stat-number" data-count="5000" data-suffix="+">0</div>
+                        <p class="stat-label">Happy Members</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 3: DISCIPLINES
+    ============================================= -->
+    <section class="section-padding bg-dark-section" id="disciplines">
+        <div class="container">
+            <div class="section-header text-center mb-5 text-white">
+                <span class="section-tag text-primary">EXPLORE THE GYM</span>
+                <h2 class="display-5 fw-bold mt-2">CHOOSE YOUR PATH</h2>
+                <p class="text-white opacity-50 mt-2 mx-auto" style="max-width:520px;">Master every plane of existence in our curated zones. Each discipline crafted for every skill level.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="discipline-card h-100 overflow-hidden border-0">
+                        <div class="discipline-img-wrap">
+                            <img src="assets/images/bouldering.png" alt="Bouldering" class="discipline-img">
+                            <div class="discipline-img-overlay"></div>
+                            <span class="discipline-tag">BOULDERING</span>
+                        </div>
+                        <div class="discipline-body p-4">
+                            <h3 class="h4 fw-bold mb-2">BOULDERING</h3>
+                            <p class="text-muted mb-4 small">Technical, powerful, and fun. No ropes — just you and the problem. Over 400 problems reset weekly to keep you challenged.</p>
+                            <ul class="disc-features list-unstyled mb-4">
+                                <li><i class="bi bi-check2-circle text-primary me-2"></i>400+ Problems</li>
+                                <li><i class="bi bi-check2-circle text-primary me-2"></i>All Skill Levels</li>
+                                <li><i class="bi bi-check2-circle text-primary me-2"></i>Weekly Resets</li>
+                            </ul>
+                            <a href="service-details.html" class="btn-link-primary">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="discipline-card h-100 overflow-hidden border-0">
+                        <div class="discipline-img-wrap">
+                            <img src="assets/images/training.png" alt="Lead Climbing" class="discipline-img">
+                            <div class="discipline-img-overlay"></div>
+                            <span class="discipline-tag">LEAD CLIMBING</span>
+                        </div>
+                        <div class="discipline-body p-4">
+                            <h3 class="h4 fw-bold mb-2">LEAD CLIMBING</h3>
+                            <p class="text-muted mb-4 small">The pinnacle of technical climbing. Our 60ft overhanging lead wall challenges the world's best athletes daily.</p>
+                            <ul class="disc-features list-unstyled mb-4">
+                                <li><i class="bi bi-check2-circle text-primary me-2"></i>60ft Lead Wall</li>
+                                <li><i class="bi bi-check2-circle text-primary me-2"></i>Auto-Belay Systems</li>
+                                <li><i class="bi bi-check2-circle text-primary me-2"></i>Expert Instruction</li>
+                            </ul>
+                            <a href="service-details.html" class="btn-link-primary">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="discipline-card discipline-card--accent h-100 overflow-hidden border-0">
+                        <div class="discipline-img-wrap">
+                            <img src="assets/images/hero.png" alt="Training Zone" class="discipline-img">
+                            <div class="discipline-img-overlay"></div>
+                            <span class="discipline-tag" style="background:var(--accent-color);">TRAINING ZONE</span>
+                        </div>
+                        <div class="discipline-body p-4">
+                            <h3 class="h4 fw-bold mb-2">TRAINING ZONE</h3>
+                            <p class="text-muted mb-4 small">Hangboards, Moonboard, Campus board, and a full weights area for the serious performance athlete.</p>
+                            <ul class="disc-features list-unstyled mb-4">
+                                <li><i class="bi bi-check2-circle text-primary me-2"></i>MoonBoard 2024</li>
+                                <li><i class="bi bi-check2-circle text-primary me-2"></i>Fingerboard Station</li>
+                                <li><i class="bi bi-check2-circle text-primary me-2"></i>Full Weight Set</li>
+                            </ul>
+                            <a href="services.html" class="btn btn-primary w-100 py-2">View All Facilities</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =============================================
+         SECTION 4: WHY CHOOSE US (Features)
+    ============================================= -->
+    <section class="section-padding features-section" id="why-us">
+        <div class="container">
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-6">
+                    <span class="section-tag text-primary">WHY SUMMIT ASCENT</span>
+                    <h2 class="display-5 fw-bold mt-2 mb-3">MORE THAN JUST A GYM.</h2>
+                    <p class="text-muted">We're a community of passionate climbers dedicated to pushing limits. From beginner to competition level, our world-class facilities and professional coaches are here to elevate your game.</p>
+                    <a href="about.html" class="btn btn-primary mt-4 px-5" id="features-learn-more">Learn Our Story</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="feature-card h-100 p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">Top Safety Standards</h5>
+                                <p class="text-muted small mb-0">All routes certified. Daily safety checks and world-class auto-belay systems installed.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-card h-100 p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-person-badge"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">Expert Coaches</h5>
+                                <p class="text-muted small mb-0">IRCRA-certified instructors with 10+ years of competition and coaching experience.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-card h-100 p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">Fresh Problems Weekly</h5>
+                                <p class="text-muted small mb-0">Routes reset every week by professional setters so every visit feels brand new.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-card h-100 p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-cup-hot"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">Climber's Lounge</h5>
+                                <p class="text-muted small mb-0">Chill out in our premium café lounge with specialty coffee, shakes, and great vibes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature Banner Strip -->
+            <div class="features-strip d-flex flex-wrap justify-content-around align-items-center gap-3 p-4 rounded-3">
+                <div class="strip-item d-flex align-items-center gap-3">
+                    <i class="bi bi-clock-history fs-4 text-primary"></i>
+                    <div><strong class="d-block">Open 7 Days</strong><small class="text-muted">6 AM – 11 PM</small></div>
+                </div>
+                <div class="strip-divider d-none d-md-block"></div>
+                <div class="strip-item d-flex align-items-center gap-3">
+                    <i class="bi bi-geo-alt fs-4 text-primary"></i>
+                    <div><strong class="d-block">Prime Location</strong><small class="text-muted">123 Vertical Way</small></div>
+                </div>
+                <div class="strip-divider d-none d-md-block"></div>
+                <div class="strip-item d-flex align-items-center gap-3">
+                    <i class="bi bi-bag-heart fs-4 text-primary"></i>
+                    <div><strong class="d-block">Gear Rental</strong><small class="text-muted">Shoes, harness & chalk</small></div>
+                </div>
+                <div class="strip-divider d-none d-md-block"></div>
+                <div class="strip-item d-flex align-items-center gap-3">
+                    <i class="bi bi-phone fs-4 text-primary"></i>
+                    <div><strong class="d-block">App Booking</strong><small class="text-muted">Reserve your spot online</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 5: COACHES / TEAM
+    ============================================= -->
+    <section class="section-padding coaches-section bg-dark-section" id="coaches">
+        <div class="container">
+            <div class="section-header text-center mb-5 text-white">
+                <span class="section-tag text-primary">THE EXPERTS</span>
+                <h2 class="display-5 fw-bold mt-2">MEET YOUR COACHES</h2>
+                <p class="text-white opacity-50 mt-2 mx-auto" style="max-width:520px;">IRCRA-certified pros with decades of combined climbing and coaching experience.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="coach-card text-center">
+                        <div class="coach-avatar-wrap mb-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Coach Alex Rivera" class="coach-avatar">
+                            <div class="coach-socials">
+                                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <h4 class="fw-bold mb-1 text-white">Alex Rivera</h4>
+                        <p class="text-primary small fw-semibold mb-2">Head Coach &amp; Route Setter</p>
+                        <p class="text-white opacity-50 small">14 years competitive climbing. IFSC World Cup finalist. Specialises in lead &amp; technique.</p>
+                        <div class="coach-rating mt-3">
+                            <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                            <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                            <i class="bi bi-star-fill text-accent"></i>
+                            <span class="small text-white opacity-50 ms-1">(142 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="coach-card text-center">
+                        <div class="coach-avatar-wrap mb-4">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=face" alt="Coach Mia Chen" class="coach-avatar">
+                            <div class="coach-socials">
+                                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <h4 class="fw-bold mb-1 text-white">Mia Chen</h4>
+                        <p class="text-primary small fw-semibold mb-2">Youth & Beginner Coach</p>
+                        <p class="text-white opacity-50 small">Former national champion. Passionate about making climbing accessible for all ages and abilities.</p>
+                        <div class="coach-rating mt-3">
+                            <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                            <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                            <i class="bi bi-star-fill text-accent"></i>
+                            <span class="small text-white opacity-50 ms-1">(98 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="coach-card text-center">
+                        <div class="coach-avatar-wrap mb-4">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Coach Jake Morrow" class="coach-avatar">
+                            <div class="coach-socials">
+                                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <h4 class="fw-bold mb-1 text-white">Jake Morrow</h4>
+                        <p class="text-primary small fw-semibold mb-2">Strength & Conditioning</p>
+                        <p class="text-white opacity-50 small">MSc Sports Science. Specialises in climbing-specific strength, injury prevention and peak performance.</p>
+                        <div class="coach-rating mt-3">
+                            <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                            <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                            <i class="bi bi-star-half text-accent"></i>
+                            <span class="small text-white opacity-50 ms-1">(76 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="coach-card text-center">
+                        <div class="coach-avatar-wrap mb-4">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face" alt="Coach Sarah Wells" class="coach-avatar">
+                            <div class="coach-socials">
+                                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <h4 class="fw-bold mb-1 text-white">Sarah Wells</h4>
+                        <p class="text-primary small fw-semibold mb-2">Bouldering Specialist</p>
+                        <p class="text-white opacity-50 small">V13 boulderer. Known for her creative methodical problem-solving workshops and mental coaching.</p>
+                        <div class="coach-rating mt-3">
+                            <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                            <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                            <i class="bi bi-star-fill text-accent"></i>
+                            <span class="small text-white opacity-50 ms-1">(115 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="about.html" class="btn btn-outline-light px-5" id="coaches-view-all">View Full Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         NEW SECTION: THE PRO SHOP
+    ============================================= -->
+    <section class="section-padding pro-shop-section" id="pro-shop">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-4">
+                    <span class="section-tag text-primary">THE RETAIL HUB</span>
+                    <h2 class="display-5 fw-bold mt-2 mb-4">EQUIP YOUR ASCENT.</h2>
+                    <p class="text-muted mb-4">Don't let gear hold you back. Our Pro Shop carries a curated selection of the world's best climbing brands, expert-tested and gym-approved.</p>
+                    <ul class="list-unstyled mb-5">
+                        <li class="mb-2 d-flex align-items-center gap-3"><i class="bi bi-check-circle-fill text-primary"></i> <span>Premium Shoe Fitting</span></li>
+                        <li class="mb-2 d-flex align-items-center gap-3"><i class="bi bi-check-circle-fill text-primary"></i> <span>Technical Apparel</span></li>
+                        <li class="mb-2 d-flex align-items-center gap-3"><i class="bi bi-check-circle-fill text-primary"></i> <span>Hardware &amp; Chalk</span></li>
+                    </ul>
+                    <a href="services.html" class="btn btn-primary btn-lg px-5">Visit Pro Shop</a>
+                </div>
+                <div class="col-lg-8">
+                    <div class="pro-shop-grid">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">BEST SELLER</span>
+                            <img src="https://images.unsplash.com/photo-1520218508822-998633d997e6?w=400&h=400&fit=crop" alt="Climbing Shoes" class="product-img">
+                            <h5 class="fw-bold mb-1">Apex Pro Shoes</h5>
+                            <p class="text-muted small mb-0">High-performance downturn</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://loremflickr.com/400/400/bouldering,chalk" alt="Chalk Bag" class="product-img">
+                            <h5 class="fw-bold mb-1">Summit Chalk Bag</h5>
+                            <p class="text-muted small mb-0">Ergonomic design</p>
+                        </div>
+                        <div class="product-card position-relative">
+                            <span class="product-badge">NEW DROP</span>
+                            <img src="https://loremflickr.com/400/400/climbing,harness" alt="Harness" class="product-img">
+                            <h5 class="fw-bold mb-1">Lite-Weight Harness</h5>
+                            <p class="text-muted small mb-0">All-day comfort</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 6: TESTIMONIALS
+    ============================================= -->
+    <section class="section-padding testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="section-tag text-primary">WHAT MEMBERS SAY</span>
+                <h2 class="display-5 fw-bold mt-2">REAL CLIMBERS. REAL RESULTS.</h2>
+                <p class="text-muted mt-2 mx-auto" style="max-width:520px;">Don't just take our word for it — hear from the people who climb with us every day.</p>
+            </div>
+
+            <!-- Testimonials Carousel -->
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="testimonial-card h-100 p-4">
+                                    <div class="d-flex mb-3">
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i>
+                                    </div>
+                                    <p class="mb-4 fst-italic">"Summit Ascent completely transformed my fitness. The coaches are world-class and the community is incredibly welcoming. Best investment I've ever made!"</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Jordan K." class="testimonial-avatar">
+                                        <div>
+                                            <strong class="d-block">Jordan K.</strong>
+                                            <small class="text-muted">Member since 2023</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="testimonial-card h-100 p-4">
+                                    <div class="d-flex mb-3">
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i>
+                                    </div>
+                                    <p class="mb-4 fst-italic">"The route setting here is incredible. Problems are always fresh, creative and perfectly graded. I've improved more in 6 months than in the previous 3 years."</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face" alt="Marcus T." class="testimonial-avatar">
+                                        <div>
+                                            <strong class="d-block">Marcus T.</strong>
+                                            <small class="text-muted">Member since 2022</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 d-none d-lg-block">
+                                <div class="testimonial-card h-100 p-4">
+                                    <div class="d-flex mb-3">
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-half text-accent"></i>
+                                    </div>
+                                    <p class="mb-4 fst-italic">"Took my 8-year-old to the kids' class and she's obsessed. The youth coaching here is absolutely top-tier. Safe, fun, and professionally run."</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=face" alt="Priya S." class="testimonial-avatar">
+                                        <div>
+                                            <strong class="d-block">Priya S.</strong>
+                                            <small class="text-muted">Member since 2024</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="testimonial-card h-100 p-4">
+                                    <div class="d-flex mb-3">
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i>
+                                    </div>
+                                    <p class="mb-4 fst-italic">"I came in as a total beginner and in 3 months I'm sending V5 problems. Alex's coaching is unmatched. The gym atmosphere is electric every single day."</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=60&h=60&fit=crop&crop=face" alt="Daniel R." class="testimonial-avatar">
+                                        <div>
+                                            <strong class="d-block">Daniel R.</strong>
+                                            <small class="text-muted">Member since 2024</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="testimonial-card h-100 p-4">
+                                    <div class="d-flex mb-3">
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i>
+                                    </div>
+                                    <p class="mb-4 fst-italic">"The facility is immaculate. Equipment is top quality, the lounge is amazing, staff are always helpful. This is the gold standard for climbing gyms."</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=60&h=60&fit=crop&crop=face" alt="Zoe M." class="testimonial-avatar">
+                                        <div>
+                                            <strong class="d-block">Zoe M.</strong>
+                                            <small class="text-muted">Member since 2023</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 d-none d-lg-block">
+                                <div class="testimonial-card h-100 p-4">
+                                    <div class="d-flex mb-3">
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                                        <i class="bi bi-star-fill text-accent"></i>
+                                    </div>
+                                    <p class="mb-4 fst-italic">"Relocated to the city and finding Summit Ascent saved my sanity. Incredible community events, competitions and the social nights are a blast!"</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=60&h=60&fit=crop&crop=face" alt="Leon W." class="testimonial-avatar">
+                                        <div>
+                                            <strong class="d-block">Leon W.</strong>
+                                            <small class="text-muted">Member since 2023</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev" style="width:40px;">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next" style="width:40px;">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <!-- Google Rating Strip -->
+            <div class="google-rating-strip text-center mt-5 p-4 rounded-3">
+                <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+                    <div>
+                        <strong class="fs-2">4.9</strong>
+                        <div class="d-inline-flex ms-1">
+                            <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                            <i class="bi bi-star-fill text-accent"></i><i class="bi bi-star-fill text-accent"></i>
+                            <i class="bi bi-star-fill text-accent"></i>
+                        </div>
+                    </div>
+                    <div class="vr d-none d-md-block mx-2" style="height:40px;"></div>
+                    <div>
+                        <p class="mb-0 text-muted small">Based on <strong>438 Google Reviews</strong></p>
+                        <p class="mb-0 text-muted small">98% of members would recommend us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =============================================
+         SECTION 7: FEATURED QUOTE
+    ============================================= -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <i class="bi bi-quote display-1 text-primary opacity-25"></i>
+            <h3 class="fw-light mb-4 px-lg-5 text-uppercase">"Summit Ascent isn't just a gym; it's a second home. The premium facilities allow me to train at an international level while balancing a full-time career."</h3>
+            <p class="fw-bold text-uppercase small ls-2">— Marc Stone, Lead Pro</p>
+        </div>
+    </section>
+
+
+    <!-- =============================================
+         NEW SECTION: SAFETY & ORIENTATION
+    ============================================= -->
+    <section class="section-padding safety-section" id="safety">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="section-tag text-primary">YOUR FIRST CLIMB</span>
+                <h2 class="display-5 fw-bold mt-2 text-white">READY FOR TAKEOFF?</h2>
+                <p class="text-white opacity-50 mt-2 mx-auto" style="max-width:520px;">Safety is our soul. Follow these three simple steps to start your climbing journey today.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="safety-step">
+                        <span class="safety-num">01</span>
+                        <div class="safety-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Sign the Waiver</h4>
+                        <p class="text-white opacity-75 small mb-4">Everyone entering the gym must sign a waiver. Save time by doing it online before you arrive.</p>
+                        <a href="contact.html" class="btn btn-outline-light btn-sm px-4">Sign Online</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="safety-step">
+                        <span class="safety-num">02</span>
+                        <div class="safety-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Quick Orientation</h4>
+                        <p class="text-white opacity-75 small mb-4">First time? Our floor staff will give you a 10-minute tour and safety walkthrough of the facility.</p>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-clock small text-primary"></i>
+                            <span class="small opacity-50">Every 15 mins</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="safety-step">
+                        <span class="safety-num">03</span>
+                        <div class="safety-icon">
+                            <i class="bi bi-triangle-half"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Start Climbing</h4>
+                        <p class="text-white opacity-75 small mb-4">Grab your gear, find a route that speaks to you, and start your ascent. Have fun!</p>
+                        <a href="register.html" class="btn btn-primary btn-sm px-4">Create Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    </main>
+
+    <!-- =============================================
+         FOOTER
+    ============================================= -->
+    <footer class="footer-section section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i class="bi bi-triangle-half me-2 fs-3 text-primary"></i>
+                        <span class="fw-bold fs-4 text-uppercase">Summit Ascent</span>
+                    </a>
+                    <p class="text-muted pe-lg-5 small">Redefining indoor climbing through premium design, passionate community, and world-class coaching. Founded 2024.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="footer-social" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-4 footer-title">Company</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Facilities</a></li>
+                        <li><a href="blog.html">Community</a></li>
+                        <li><a href="pricing.html">Memberships</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-4 footer-title">Support</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Safety Rules</a></li>
+                        <li><a href="#">Waiver Form</a></li>
+                        <li><a href="coming-soon.html">Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4 footer-title">Stay Vertical</h5>
+                    <p class="text-muted small mb-4">Get training tips, event invites and beta drops directly in your inbox. Zero spam, promise.</p>
+                    <form class="footer-newsletter position-relative" id="newsletter-form">
+                        <input type="email" class="form-control py-3 pe-5" placeholder="Your Email" required>
+                        <button class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-1 px-3 py-2" type="submit" aria-label="Subscribe">
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </form>
+                    <div class="footer-contact mt-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-geo-alt text-primary"></i>
+                            <small class="text-muted">123 Vertical Way, Climb City, ST 12345</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-telephone text-primary"></i>
+                            <small class="text-muted">+1 (555) 867-5309</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-envelope text-primary"></i>
+                            <small class="text-muted">hello@summitascent.com</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-muted small mb-0">© 2026 Summit Ascent. Built for the peak. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                        <a href="#" class="text-muted small me-3">Privacy Policy</a>
+                        <a href="#" class="text-muted small me-3">Terms of Service</a>
+                        <a href="#" class="text-muted small">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
+</body>
+</html>

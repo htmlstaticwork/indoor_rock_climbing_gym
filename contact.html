@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Summit Ascent</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <style>
+        /* ── Connect Elsewhere Section ── */
+        .connect-elsewhere-section {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .connect-card {
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            background-color: var(--white);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            overflow: hidden;
+        }
+
+        .connect-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--primary-color);
+        }
+
+        [data-theme="dark"] .connect-card {
+            background-color: #0f172a;
+            border-color: #1e293b;
+        }
+
+        [data-theme="dark"] .connect-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 16px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        .connect-card-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            gap: 1rem;
+        }
+
+        .connect-icon-wrap {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background-color: rgba(59, 130, 246, 0.08);
+            transition: background-color 0.25s ease;
+        }
+
+        .connect-card:hover .connect-icon-wrap {
+            background-color: rgba(59, 130, 246, 0.15);
+        }
+
+        /* GitHub SVG */
+        #connect-github .connect-svg {
+            width: 36px;
+            height: 36px;
+            fill: #1a7f5a;
+        }
+
+        /* Twitter/X SVG */
+        #connect-twitter .connect-svg {
+            width: 34px;
+            height: 34px;
+            fill: #0f172a;
+        }
+
+        [data-theme="dark"] #connect-twitter .connect-svg {
+            fill: #e2e8f0;
+        }
+
+        /* Bootstrap Icon sizing */
+        .connect-bi-icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        /* Instagram gradient icon */
+        .connect-icon-instagram {
+            background: linear-gradient(135deg, rgba(225,48,108,0.1), rgba(253,121,36,0.1));
+        }
+        .connect-card:hover .connect-icon-instagram {
+            background: linear-gradient(135deg, rgba(225,48,108,0.18), rgba(253,121,36,0.18));
+        }
+        #connect-instagram .connect-bi-icon {
+            background: linear-gradient(135deg, #e1306c, #fd7924);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* YouTube red icon */
+        .connect-icon-youtube {
+            background-color: rgba(255, 0, 0, 0.08);
+        }
+        .connect-card:hover .connect-icon-youtube {
+            background-color: rgba(255, 0, 0, 0.15);
+        }
+        #connect-youtube .connect-bi-icon {
+            color: #ff0000;
+        }
+
+        .connect-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+        }
+
+        [data-theme="dark"] .connect-label {
+            color: #e2e8f0;
+        }
+
+        /* ── Find the Gym Section ── */
+        .find-us-section {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .find-us-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem 1.75rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .find-us-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.09);
+            border-color: var(--primary-color);
+        }
+
+        [data-theme="dark"] .find-us-card {
+            background-color: #0f172a;
+            border-color: #1e293b;
+        }
+
+        [data-theme="dark"] .find-us-card:hover {
+            border-color: var(--primary-color);
+        }
+
+        .find-us-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .find-us-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background-color: rgba(59,130,246,0.1);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .find-us-card:hover .find-us-icon {
+            transform: scale(1.1);
+        }
+
+        .find-us-icon--green {
+            background-color: rgba(34,197,94,0.1);
+            color: #16a34a;
+        }
+
+        .find-us-icon--amber {
+            background-color: rgba(245,158,11,0.1);
+            color: #d97706;
+        }
+
+        .find-us-card-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        [data-theme="dark"] .find-us-card-title {
+            color: #f1f5f9;
+        }
+
+        /* Hours list */
+        .find-us-hours li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .find-us-hours li:last-child {
+            border-bottom: none;
+        }
+
+        .find-us-time {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .find-us-note {
+            font-size: 0.8rem !important;
+            color: var(--text-muted) !important;
+            font-style: italic;
+            padding-top: 0.5rem !important;
+            border-bottom: none !important;
+        }
+
+        /* Access rows */
+        .find-us-access-row {
+            display: flex;
+            align-items: center;
+            padding: 0.35rem 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .find-us-access-row:last-child {
+            border-bottom: none;
+        }
+
+        /* Map container */
+        .find-us-map-wrap {
+            height: 100%;
+            min-height: 480px;
+            border: 1px solid var(--border-color);
+        }
+
+        [data-theme="dark"] .find-us-map-wrap {
+            border-color: #1e293b;
+        }
+
+        /* ── Pre-Contact FAQ Section ── */
+        .pre-faq-section {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .pre-faq-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem 1.75rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .pre-faq-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.10);
+            border-color: var(--primary-color);
+        }
+
+        [data-theme="dark"] .pre-faq-card {
+            background-color: #0f172a;
+            border-color: #1e293b;
+        }
+
+        [data-theme="dark"] .pre-faq-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 48px rgba(59, 130, 246, 0.12);
+        }
+
+        /* Icon bubble */
+        .pre-faq-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.1rem;
+            transition: background-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .pre-faq-card:hover .pre-faq-icon {
+            background-color: rgba(59, 130, 246, 0.18);
+            transform: scale(1.08);
+        }
+
+        /* Green variant — Waivers & Safety */
+        .pre-faq-icon--green {
+            background-color: rgba(34, 197, 94, 0.1);
+            color: #16a34a;
+        }
+        .pre-faq-card:hover .pre-faq-icon--green {
+            background-color: rgba(34, 197, 94, 0.18);
+        }
+
+        /* Amber variant — Session Planning */
+        .pre-faq-icon--amber {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: #d97706;
+        }
+        .pre-faq-card:hover .pre-faq-icon--amber {
+            background-color: rgba(245, 158, 11, 0.18);
+        }
+
+        .pre-faq-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        [data-theme="dark"] .pre-faq-title {
+            color: #f1f5f9;
+        }
+
+        .pre-faq-text {
+            font-size: 0.925rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* ── Social icon fix: light mode (outside dark footer) ── */
+        [data-theme="light"] .footer-social {
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--primary-color);
+        }
+
+        [data-theme="light"] .footer-social:hover {
+            background: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="preloader"><div class="loader-spinner"></div></div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-sticky py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-triangle-half me-2 fs-3 text-primary"></i>
+                <span class="fw-bold fs-4 text-uppercase letter-space">Summit Ascent</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-triangle-half me-2 fs-4 text-primary"></i>
+                        <h5 class="offcanvas-title fw-bold mb-0">SUMMIT ASCENT</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-center gap-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Home V1 — Classic</a></li>
+                                <li><a class="dropdown-item" href="home-v2.html">Home V2 — Interactive</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+
+                        <!-- Toggles -->
+                        <li class="nav-item ms-lg-3">
+                            <div class="form-check form-switch p-0 m-0">
+                                <input class="form-check-input ms-0" type="checkbox" id="theme-toggle" role="switch">
+                                <label class="form-check-label ms-1 d-none d-lg-inline" for="theme-toggle">
+                                    <i class="bi bi-moon-stars"></i>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <button class="btn btn-sm btn-outline-secondary" id="rtl-toggle">RTL</button>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary btn-sm px-4" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Contact Hero -->
+        <section class="section-padding bg-dark text-white position-relative overflow-hidden" style="min-height: 55vh; background: url('assets/images/climbing-lead-hq.png') center/cover no-repeat;">
+            <div class="hero-overlay" style="position: absolute; inset: 0; background: rgba(15, 23, 42, 0.85); z-index: 0;"></div>
+            <div class="container h-100 d-flex align-items-center justify-content-center position-relative" style="z-index: 1;">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary px-3 py-2 text-uppercase mb-3 ls-2">Get in Touch</span>
+                    <h1 class="display-2 fw-bold text-uppercase mb-4">REACH THE PEAK</h1>
+                    <p class="lead opacity-75 mx-auto mb-0" style="max-width: 700px;">Have a question about memberships, courses, or events? Send us a message and our team will get back to you within 24 hours.</p>
+                </div>
+            </div>
+            <!-- Background Watermark -->
+            <div class="position-absolute top-50 start-50 translate-middle w-100 opacity-05 pe-none">
+                <h2 class="display-1 fw-bold text-uppercase text-center" style="font-size: 15rem; letter-spacing: 50px;">ASCENT</h2>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="row g-5">
+                    <!-- Contact Form Column -->
+                    <div class="col-lg-7">
+                        
+                        <form action="https://formspree.io/f/placeholder" method="POST" class="needs-validation" novalidate>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-uppercase ls-1">Full Name</label>
+                                    <input type="text" name="name" class="form-control py-3 border-2" placeholder="John Doe" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-uppercase ls-1">Email Address</label>
+                                    <input type="email" name="email" class="form-control py-3 border-2" placeholder="john@example.com" required>
+                                    <div class="invalid-feedback">Please provide a valid email.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-bold small text-uppercase ls-1">Subject</label>
+                                    <select class="form-select py-3 border-2" required>
+                                        <option value="" selected disabled>Select an option</option>
+                                        <option value="membership">Membership Inquiry</option>
+                                        <option value="classes">Class Booking</option>
+                                        <option value="events">Corporate Events</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a subject.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-bold small text-uppercase ls-1">Your Message</label>
+                                    <textarea name="message" class="form-control border-2" rows="6" placeholder="How can we help you?" required></textarea>
+                                    <div class="invalid-feedback">Please enter your message.</div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 py-3 shadow">SEND MESSAGE</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info Column -->
+                    <div class="col-lg-5">
+                        <div class="ps-lg-5">
+                            <div class="mb-5 pb-5 border-bottom border-secondary bg-opacity-10">
+                                <h4 class="fw-bold mb-4">CONTACT INFORMATION</h4>
+                                <div class="d-flex mb-4">
+                                    <i class="bi bi-geo-alt-fill text-primary fs-3 me-4"></i>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Our Location</h6>
+                                        <p class="text-muted small mb-0">123 Vertical Avenue, Climb City, CL 90210</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-4">
+                                    <i class="bi bi-telephone-fill text-primary fs-3 me-4"></i>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Phone Number</h6>
+                                        <p class="text-muted small mb-0">+1 (555) 0123-4567</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <i class="bi bi-envelope-fill text-primary fs-3 me-4"></i>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Email Address</h6>
+                                        <p class="text-muted small mb-0">info@summitascent.com</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="fw-bold mb-4">FOLLOW THE CRAG</h4>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="footer-social" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                                <a href="#" class="footer-social" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Find the Gym Section -->
+        <section class="find-us-section section-padding">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge bg-primary px-3 py-2 text-uppercase mb-3 ls-2">Visit Us</span>
+                    <h2 class="fw-bold display-5 mb-3">Find the Gym</h2>
+                    <p class="text-muted mx-auto" style="max-width:520px;">Everything you need to know before you show up chalk-dusted and ready to climb.</p>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+
+                    <!-- Left: Info Cards -->
+                    <div class="col-lg-5">
+                        <div class="d-flex flex-column gap-4 h-100">
+
+                            <!-- Opening Hours -->
+                            <div class="find-us-card">
+                                <div class="find-us-card-header">
+                                    <div class="find-us-icon">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+                                    <h5 class="find-us-card-title">Opening Hours</h5>
+                                </div>
+                                <ul class="find-us-hours list-unstyled mb-0">
+                                    <li>
+                                        <span>Monday – Friday</span>
+                                        <span class="find-us-time">06:00 – 22:00</span>
+                                    </li>
+                                    <li>
+                                        <span>Saturday</span>
+                                        <span class="find-us-time">07:00 – 21:00</span>
+                                    </li>
+                                    <li>
+                                        <span>Sunday</span>
+                                        <span class="find-us-time">08:00 – 20:00</span>
+                                    </li>
+                                    <li class="find-us-note">
+                                        <i class="bi bi-info-circle-fill me-1 text-primary"></i>
+                                        Last entry 1 hour before closing.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Parking & Access -->
+                            <div class="find-us-card">
+                                <div class="find-us-card-header">
+                                    <div class="find-us-icon find-us-icon--green">
+                                        <i class="bi bi-p-square-fill"></i>
+                                    </div>
+                                    <h5 class="find-us-card-title">Parking &amp; Access</h5>
+                                </div>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="find-us-access-row"><i class="bi bi-check-circle-fill text-success me-2"></i>Free on-site parking – 80 spaces</li>
+                                    <li class="find-us-access-row"><i class="bi bi-check-circle-fill text-success me-2"></i>Accessible entrance on North side</li>
+                                    <li class="find-us-access-row"><i class="bi bi-check-circle-fill text-success me-2"></i>Bike racks &amp; showers available</li>
+                                    <li class="find-us-access-row"><i class="bi bi-train-front-fill text-primary me-2"></i>Bus stop — Route 14 &amp; 22, 2 min walk</li>
+                                </ul>
+                            </div>
+
+                            <!-- What to Bring -->
+                            <div class="find-us-card">
+                                <div class="find-us-card-header">
+                                    <div class="find-us-icon find-us-icon--amber">
+                                        <i class="bi bi-bag-check-fill"></i>
+                                    </div>
+                                    <h5 class="find-us-card-title">What to Bring</h5>
+                                </div>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="find-us-access-row"><i class="bi bi-dot fs-5 text-primary"></i>Comfortable athletic clothing</li>
+                                    <li class="find-us-access-row"><i class="bi bi-dot fs-5 text-primary"></i>Climbing shoes (or rent ours)</li>
+                                    <li class="find-us-access-row"><i class="bi bi-dot fs-5 text-primary"></i>Chalk bag &amp; liquid chalk</li>
+                                    <li class="find-us-access-row"><i class="bi bi-dot fs-5 text-primary"></i>Water bottle — stay hydrated!</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right: Map -->
+                    <div class="col-lg-7">
+                        <div class="find-us-map-wrap rounded-4 overflow-hidden shadow">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.6080562304!2d-119.5937216!3d37.7425667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8096f21a5cf8f541%3A0xe54fb141d8e137f8!2sEl%20Capitan!5e0!3m2!1sen!2sus!4v1711960000000!5m2!1sen!2sus"
+                                width="100%"
+                                height="100%"
+                                style="border:0; display:block;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Summit Ascent Climbing Gym Location">
+                            </iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pre-Contact FAQ Section -->
+    <section class="pre-faq-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary px-3 py-2 text-uppercase mb-3 ls-2">Before You Reach Out</span>
+                <h2 class="fw-bold display-5 mb-3">Pre-Contact FAQ</h2>
+                <p class="text-muted mx-auto" style="max-width:560px;">Quick answers to common questions to help us get you on the wall faster.</p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Card 1: Response Time -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="pre-faq-card h-100">
+                        <div class="pre-faq-icon">
+                            <i class="bi bi-clock"></i>
+                        </div>
+                        <h5 class="pre-faq-title">Response Time</h5>
+                        <p class="pre-faq-text">We typically respond to all enquiries within 24–48 business hours. For urgent membership or event matters, please mention <strong>"Urgent"</strong> in your subject line and we'll prioritise your message.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Waivers & Safety -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="pre-faq-card h-100">
+                        <div class="pre-faq-icon pre-faq-icon--green">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5 class="pre-faq-title">Waivers &amp; Safety</h5>
+                        <p class="pre-faq-text">All climbers must complete a safety waiver before their first visit. First-timers are required to attend a mandatory belay orientation. Your safety is our highest priority at every grade.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Session Planning -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="pre-faq-card h-100">
+                        <div class="pre-faq-icon pre-faq-icon--amber">
+                            <i class="bi bi-calendar2-check"></i>
+                        </div>
+                        <h5 class="pre-faq-title">Session Planning</h5>
+                        <p class="pre-faq-text">Not sure where to start? We can arrange a discovery session with one of our coaches to assess your current level and map out a clear, goal-driven training plan tailored just for you.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Elsewhere Section -->
+    <section class="connect-elsewhere-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary px-3 py-2 text-uppercase mb-3 ls-2" style="letter-spacing:2px;">Find Us Online</span>
+                <h2 class="fw-bold display-5 mb-3">Connect Elsewhere</h2>
+                <p class="text-muted mx-auto" style="max-width:520px;">Follow our journey beyond these walls. Stay updated on the latest beta, events, and climbing culture across our social platforms.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- GitHub Card -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="connect-card d-block text-decoration-none" id="connect-github">
+                        <div class="connect-card-inner">
+                            <div class="connect-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96" class="connect-svg" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/>
+                                </svg>
+                            </div>
+                            <span class="connect-label">GitHub</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Twitter / X Card -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="connect-card d-block text-decoration-none" id="connect-twitter">
+                        <div class="connect-card-inner">
+                            <div class="connect-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" class="connect-svg" aria-hidden="true">
+                                    <path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L88.11 0H0l117.13 166.93L0 300h26.46l102.4-116.59L218 300h88.11L178.57 127.15Zm-36.26 41.26-11.87-16.61L36.44 19.39H74.7l76.29 106.76 11.87 16.61 99.06 138.64h-38.26L142.31 168.41Z"/>
+                                </svg>
+                            </div>
+                            <span class="connect-label">Twitter / X</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Instagram Card -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="connect-card d-block text-decoration-none" id="connect-instagram">
+                        <div class="connect-card-inner">
+                            <div class="connect-icon-wrap connect-icon-instagram">
+                                <i class="bi bi-instagram connect-bi-icon"></i>
+                            </div>
+                            <span class="connect-label">Instagram</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- YouTube Card -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="connect-card d-block text-decoration-none" id="connect-youtube">
+                        <div class="connect-card-inner">
+                            <div class="connect-icon-wrap connect-icon-youtube">
+                                <i class="bi bi-youtube connect-bi-icon"></i>
+                            </div>
+                            <span class="connect-label">YouTube</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i class="bi bi-triangle-half me-2 fs-3 text-primary"></i>
+                        <span class="fw-bold fs-4 text-uppercase">Summit Ascent</span>
+                    </a>
+                    <p class="text-muted pe-lg-5 small">Redefining indoor climbing through premium design, passionate community, and world-class coaching. Founded 2024.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="footer-social" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-4 footer-title">Company</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Facilities</a></li>
+                        <li><a href="blog.html">Community</a></li>
+                        <li><a href="pricing.html">Memberships</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-4 footer-title">Support</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Safety Rules</a></li>
+                        <li><a href="#">Waiver Form</a></li>
+                        <li><a href="coming-soon.html">Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4 footer-title">Stay Vertical</h5>
+                    <p class="text-muted small mb-4">Get training tips, event invites and beta drops directly in your inbox. Zero spam, promise.</p>
+                    <form class="footer-newsletter position-relative" id="newsletter-form">
+                        <input type="email" class="form-control py-3 pe-5" placeholder="Your Email" required>
+                        <button class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-1 px-3 py-2" type="submit" aria-label="Subscribe">
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </form>
+                    <div class="footer-contact mt-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-geo-alt text-primary"></i>
+                            <small class="text-muted">123 Vertical Way, Climb City, ST 12345</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-telephone text-primary"></i>
+                            <small class="text-muted">+1 (555) 867-5309</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-envelope text-primary"></i>
+                            <small class="text-muted">hello@summitascent.com</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-muted small mb-0">© 2026 Summit Ascent. Built for the peak. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                        <a href="#" class="text-muted small me-3">Privacy Policy</a>
+                        <a href="#" class="text-muted small me-3">Terms of Service</a>
+                        <a href="#" class="text-muted small">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
