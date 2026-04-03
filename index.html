@@ -8,6 +8,8 @@
 
     <!-- SEO & Favicon -->
     <link rel="canonical" href="https://summitascent.com/">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
     <meta property="og:title" content="Summit Ascent | Premium Indoor Rock Climbing Gym">
     <meta property="og:description" content="Scale new heights with our state-of-the-art facilities and expert-led classes.">
     <meta property="og:image" content="assets/images/hero.png">
@@ -60,7 +62,7 @@
                 <span class="fw-bold fs-4 text-uppercase letter-space">Summit Ascent</span>
             </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -70,7 +72,7 @@
                         <i class="bi bi-triangle-half me-2 fs-4 text-primary"></i>
                         <h5 class="offcanvas-title fw-bold mb-0">SUMMIT ASCENT</h5>
                     </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close navigation"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-center gap-1">
@@ -91,12 +93,9 @@
 
                         <!-- Toggles -->
                         <li class="nav-item ms-lg-3">
-                            <div class="form-check form-switch p-0 m-0">
-                                <input class="form-check-input ms-0" type="checkbox" id="theme-toggle" role="switch">
-                                <label class="form-check-label ms-1 d-none d-lg-inline" for="theme-toggle">
-                                    <i class="bi bi-moon-stars"></i>
-                                </label>
-                            </div>
+                            <button class="btn btn-sm btn-outline-secondary theme-toggle-btn" id="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
                         </li>
                         <li class="nav-item ms-lg-2">
                             <button class="btn btn-sm btn-outline-secondary" id="rtl-toggle">RTL</button>
@@ -131,9 +130,9 @@
                 </div>
                 <h1 class="display-2 fw-bold mb-4 hero-headline">THE HIGHEST POINT<br><span class="text-accent">OF YOUR PASSION.</span></h1>
                 <p class="lead mb-5 opacity-75 hero-sub mx-auto" style="max-width: 700px;">Join the premiere climbing community. Over 20,000 sq ft of world-class bouldering, top-rope, and lead walls designed by masters.</p>
-                <div class="d-flex flex-wrap gap-3 justify-content-center">
-                    <a href="pricing.html" class="btn btn-primary btn-lg px-5" id="hero-cta-join">Join Now</a>
-                    <a href="services.html" class="btn btn-outline-light btn-lg px-5" id="hero-cta-explore">Explore Gym</a>
+                <div class="d-flex flex-wrap gap-3 justify-content-center hero-cta-group">
+                    <a href="pricing.html" class="btn btn-primary btn-lg px-5 hero-cta primary" id="hero-cta-join">Join Now</a>
+                    <a href="services.html" class="btn btn-primary btn-lg px-5 hero-cta secondary" id="hero-cta-explore">Explore Gym</a>
                 </div>
                 <!-- Hero trust row -->
                 <div class="hero-trust d-flex flex-wrap gap-4 mt-5 justify-content-center">
@@ -470,18 +469,18 @@
                     <div class="pro-shop-grid">
                         <div class="product-card position-relative">
                             <span class="product-badge">BEST SELLER</span>
-                            <img src="https://images.unsplash.com/photo-1520218508822-998633d997e6?w=400&h=400&fit=crop" alt="Climbing Shoes" class="product-img">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80" alt="Climbing Shoes" class="product-img">
                             <h5 class="fw-bold mb-1">Apex Pro Shoes</h5>
                             <p class="text-muted small mb-0">High-performance downturn</p>
                         </div>
                         <div class="product-card">
-                            <img src="https://loremflickr.com/400/400/bouldering,chalk" alt="Chalk Bag" class="product-img">
+                            <img src="assets/images/v2-gear.png" alt="Chalk Bag" class="product-img">
                             <h5 class="fw-bold mb-1">Summit Chalk Bag</h5>
                             <p class="text-muted small mb-0">Ergonomic design</p>
                         </div>
                         <div class="product-card position-relative">
                             <span class="product-badge">NEW DROP</span>
-                            <img src="https://loremflickr.com/400/400/climbing,harness" alt="Harness" class="product-img">
+                            <img src="assets/images/training.png" alt="Harness" class="product-img">
                             <h5 class="fw-bold mb-1">Lite-Weight Harness</h5>
                             <p class="text-muted small mb-0">All-day comfort</p>
                         </div>
@@ -678,7 +677,7 @@
                         </div>
                         <h4 class="fw-bold mb-3">Sign the Waiver</h4>
                         <p class="text-white opacity-75 small mb-4">Everyone entering the gym must sign a waiver. Save time by doing it online before you arrive.</p>
-                        <a href="contact.html" class="btn btn-outline-light btn-sm px-4">Sign Online</a>
+                        <a href="contact.html" class="btn btn-primary safety-btn" id="safety-cta-sign">Sign Online</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -703,7 +702,7 @@
                         </div>
                         <h4 class="fw-bold mb-3">Start Climbing</h4>
                         <p class="text-white opacity-75 small mb-4">Grab your gear, find a route that speaks to you, and start your ascent. Have fun!</p>
-                        <a href="register.html" class="btn btn-primary btn-sm px-4">Create Account</a>
+                        <a href="register.html" class="btn btn-primary safety-btn" id="safety-cta-register">Create Account</a>
                     </div>
                 </div>
             </div>
@@ -779,7 +778,7 @@
             <div class="footer-bottom mt-5 pt-4">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="text-muted small mb-0">© 2026 Summit Ascent. Built for the peak. All rights reserved.</p>
+                        <p class="text-muted small mb-0">© 2026 Summit Ascent.</p>
                     </div>
                     <div class="col-md-6 text-md-end mt-2 mt-md-0">
                         <a href="#" class="text-muted small me-3">Privacy Policy</a>

@@ -5,10 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Summit Ascent Climbing Gym</title>
     <meta name="description" content="Discover the story behind Summit Ascent. Our mission is to provide the highest quality indoor climbing experience for everyone.">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <style>
+        @media (min-width: 768px) and (max-width: 991px) {
+            .experts-row > [class*="col-"] {
+                display: flex;
+            }
+
+            .experts-row .card-premium {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .experts-row .expert-bio {
+                flex: 1 0 auto;
+                min-height: 4.5rem;
+            }
+
+            .experts-row .expert-social {
+                margin-top: auto;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -53,12 +78,9 @@
 
                         <!-- Toggles -->
                         <li class="nav-item ms-lg-3">
-                            <div class="form-check form-switch p-0 m-0">
-                                <input class="form-check-input ms-0" type="checkbox" id="theme-toggle" role="switch">
-                                <label class="form-check-label ms-1 d-none d-lg-inline" for="theme-toggle">
-                                    <i class="bi bi-moon-stars"></i>
-                                </label>
-                            </div>
+                            <button class="btn btn-sm btn-outline-secondary theme-toggle-btn" id="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
                         </li>
                         <li class="nav-item ms-lg-2">
                             <button class="btn btn-sm btn-outline-secondary" id="rtl-toggle">RTL</button>
@@ -126,7 +148,7 @@
                     <h2 class="display-5 fw-bold">MEET THE EXPERTS</h2>
                     <p class="text-muted">Nationally ranked athletes and certified routesetters.</p>
                 </div>
-                <div class="row g-4">
+                <div class="row g-4 experts-row">
                     <div class="col-md-4">
                         <div class="card-premium text-center">
                             <div class="mb-4">
@@ -134,8 +156,8 @@
                             </div>
                             <h4 class="fw-bold mb-1">Alex Rivet</h4>
                             <p class="text-primary small text-uppercase fw-bold mb-3">Head Routesetter</p>
-                            <p class="text-muted small">15 years of experience setting for international competitions.</p>
-                            <div class="d-flex justify-content-center gap-3">
+                            <p class="text-muted small expert-bio">15 years of experience setting for international competitions.</p>
+                            <div class="d-flex justify-content-center gap-3 expert-social">
                                 <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
                                 <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
                             </div>
@@ -148,8 +170,8 @@
                             </div>
                             <h4 class="fw-bold mb-1">Sarah Peaks</h4>
                             <p class="text-primary small text-uppercase fw-bold mb-3">Lead Instructor</p>
-                            <p class="text-muted small">Specializes in elite technique and mental conditioning for lead climbing.</p>
-                            <div class="d-flex justify-content-center gap-3">
+                            <p class="text-muted small expert-bio">Specializes in elite technique and mental conditioning for lead climbing.</p>
+                            <div class="d-flex justify-content-center gap-3 expert-social">
                                 <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
                                 <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
                             </div>
@@ -162,8 +184,8 @@
                             </div>
                             <h4 class="fw-bold mb-1">Jon Crag</h4>
                             <p class="text-primary small text-uppercase fw-bold mb-3">Operations Manager</p>
-                            <p class="text-muted small">Ensuring every guest has a seamless and safe experience at Summit.</p>
-                            <div class="d-flex justify-content-center gap-3">
+                            <p class="text-muted small expert-bio">Ensuring every guest has a seamless and safe experience at Summit.</p>
+                            <div class="d-flex justify-content-center gap-3 expert-social">
                                 <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
                                 <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
                             </div>

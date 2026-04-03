@@ -20,17 +20,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Dark Mode Toggle Logic
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
-    
+
     // Set initial theme
     document.documentElement.setAttribute('data-theme', currentTheme);
+
+    const updateToggleState = (theme) => {
+        if (!themeToggle) return;
+
+        const isDark = theme === 'dark';
+        const iconClass = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+
+        if (themeToggle.tagName === 'INPUT') {
+            themeToggle.checked = isDark;
+            const themeLabel = document.querySelector(`label[for="${themeToggle.id}"]`);
+            if (themeLabel) {
+                themeLabel.innerHTML = `<i class="${iconClass}"></i>`;
+            }
+            return;
+        }
+
+        themeToggle.innerHTML = `<i class="${iconClass}"></i>`;
+        themeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    };
+
     if (themeToggle) {
-        themeToggle.checked = currentTheme === 'dark';
-        
-        themeToggle.addEventListener('change', (e) => {
-            const theme = e.target.checked ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-        });
+        updateToggleState(currentTheme);
+
+        const applyTheme = (nextTheme) => {
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('theme', nextTheme);
+            updateToggleState(nextTheme);
+        };
+
+        if (themeToggle.tagName === 'INPUT') {
+            themeToggle.addEventListener('change', event => {
+                applyTheme(event.target.checked ? 'dark' : 'light');
+            });
+        } else {
+            themeToggle.addEventListener('click', () => {
+                const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                applyTheme(nextTheme);
+            });
+        }
     }
 
     // 3. RTL Support Detection
@@ -59,15 +90,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Sticky Navbar Shadow on Scroll
     const navbar = document.querySelector('.navbar-sticky');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('shadow-sm');
-            navbar.style.backgroundColor = 'rgba(var(--bg-light-rgb), 0.95)';
-        } else {
-            navbar.classList.remove('shadow-sm');
-            navbar.style.backgroundColor = 'rgba(var(--bg-light-rgb), 0.85)';
-        }
-    });
+    if (navbar) {
+        const syncNavbarOffset = () => {
+            document.body.classList.add('has-fixed-navbar');
+            document.body.style.setProperty('--navbar-offset', `${navbar.offsetHeight}px`);
+        };
+
+        syncNavbarOffset();
+        window.addEventListener('load', syncNavbarOffset);
+        window.addEventListener('resize', syncNavbarOffset);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-sm');
+                navbar.style.backgroundColor = 'rgba(var(--bg-light-rgb), 0.95)';
+            } else {
+                navbar.classList.remove('shadow-sm');
+                navbar.style.backgroundColor = 'rgba(var(--bg-light-rgb), 0.85)';
+            }
+        });
+    }
 
     // 6. Active Link Highlighter
     const navLinks = document.querySelectorAll('.nav-link');

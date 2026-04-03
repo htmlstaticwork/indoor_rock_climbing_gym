@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facilities & Services | Summit Ascent gym</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/home2.css">
+    <style>
+        @media (max-width: 767px) {
+            .facilities-grid-section .card-premium > .row,
+            .facilities-grid-section .card-premium > .row > [class*="col-"] {
+                height: auto !important;
+            }
+
+            .facilities-grid-section .card-premium > .row {
+                flex-direction: column;
+            }
+
+            .facilities-grid-section .card-premium img.object-fit-cover {
+                display: block;
+                height: 240px !important;
+            }
+
+            .facilities-grid-section .card-premium .d-flex.flex-column {
+                align-items: center;
+                text-align: center;
+            }
+
+            .facilities-grid-section .card-premium .d-flex.flex-column .mt-auto {
+                margin-top: 0 !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -53,12 +81,9 @@
 
                         <!-- Toggles -->
                         <li class="nav-item ms-lg-3">
-                            <div class="form-check form-switch p-0 m-0">
-                                <input class="form-check-input ms-0" type="checkbox" id="theme-toggle" role="switch">
-                                <label class="form-check-label ms-1 d-none d-lg-inline" for="theme-toggle">
-                                    <i class="bi bi-moon-stars"></i>
-                                </label>
-                            </div>
+                            <button class="btn btn-sm btn-outline-secondary theme-toggle-btn" id="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
                         </li>
                         <li class="nav-item ms-lg-2">
                             <button class="btn btn-sm btn-outline-secondary" id="rtl-toggle">RTL</button>
@@ -74,7 +99,7 @@
 
     <main>
         <!-- Services Section -->
-        <section class="section-padding bg-dark text-white position-relative overflow-hidden" style="min-height: 55vh; background: url('assets/images/v2-interior.png') center/cover no-repeat;">
+        <section class="section-padding bg-dark text-white position-relative overflow-hidden facilities-grid-section" style="min-height: 55vh; background: url('assets/images/v2-interior.png') center/cover no-repeat;">
             <div class="hero-overlay" style="position: absolute; inset: 0; background: rgba(15, 23, 42, 0.85); z-index: 0;"></div>
             <div class="container h-100 d-flex align-items-center justify-content-center position-relative mb-5" style="z-index: 1;">
                 <div class="col-lg-10 text-center">
@@ -92,10 +117,10 @@
                     <div class="col-lg-6">
                         <div class="card-premium h-100 overflow-hidden p-0 border-0 shadow scale-up-hover">
                             <div class="row g-0 h-100">
-                                <div class="col-md-5 h-100">
+                                <div class="col-12 col-md-5 h-100">
                                     <img src="assets/images/climbing-bouldering-hq.png" class="h-100 w-100 object-fit-cover" alt="Bouldering Zone">
                                 </div>
-                                <div class="col-md-7 p-4 h-100 d-flex flex-column">
+                                <div class="col-12 col-md-7 p-4 h-100 d-flex flex-column">
                                     <h3 class="fw-bold mb-3">BOULDERING ZONE</h3>
                                     <p class="text-muted small mb-4">400+ problems from V0 to V12. Thick crash pads and innovative wall shapes for maximum creativity.</p>
                                     <div class="mt-auto">
@@ -109,10 +134,10 @@
                     <div class="col-lg-6">
                         <div class="card-premium h-100 overflow-hidden p-0 border-0 shadow scale-up-hover">
                             <div class="row g-0 h-100 flex-md-row-reverse">
-                                <div class="col-md-5 h-100">
+                                <div class="col-12 col-md-5 h-100">
                                     <img src="assets/images/gym-training-hq.png" class="h-100 w-100 object-fit-cover" alt="Training Zone">
                                 </div>
-                                <div class="col-md-7 p-4 h-100 d-flex flex-column">
+                                <div class="col-12 col-md-7 p-4 h-100 d-flex flex-column">
                                     <h3 class="fw-bold mb-3">ATHLETE TRAINING</h3>
                                     <p class="text-muted small mb-4">Dedicated area with hangboards, moonboards, cardio equipment, and free weights for elite level training.</p>
                                     <div class="mt-auto">
@@ -126,10 +151,10 @@
                     <div class="col-lg-6">
                         <div class="card-premium h-100 overflow-hidden p-0 border-0 shadow scale-up-hover">
                             <div class="row g-0 h-100">
-                                <div class="col-md-5 h-100">
+                                <div class="col-12 col-md-5 h-100">
                                     <img src="assets/images/climbing-lead-hq.png" class="h-100 w-100 object-fit-cover" alt="Lead Climbing">
                                 </div>
-                                <div class="col-md-7 p-4 h-100 d-flex flex-column">
+                                <div class="col-12 col-md-7 p-4 h-100 d-flex flex-column">
                                     <h3 class="fw-bold mb-3">LEAD & TOP ROPE</h3>
                                     <p class="text-muted small mb-4">60ft vertical walls with auto-belays and lead routes designed to challenge endurance and technique.</p>
                                     <div class="mt-auto">
@@ -143,10 +168,10 @@
                     <div class="col-lg-6">
                         <div class="card-premium h-100 overflow-hidden p-0 border-0 shadow scale-up-hover">
                             <div class="row g-0 h-100 flex-md-row-reverse">
-                                <div class="col-md-5 h-100">
+                                <div class="col-12 col-md-5 h-100">
                                     <img src="assets/images/climbing-bouldering-hq.png" class="h-100 w-100 object-fit-cover" style="filter: grayscale(100%);" alt="Youth Program">
                                 </div>
-                                <div class="col-md-7 p-4 h-100 d-flex flex-column">
+                                <div class="col-12 col-md-7 p-4 h-100 d-flex flex-column">
                                     <h3 class="fw-bold mb-3">YOUTH PROGRAMS</h3>
                                     <p class="text-muted small mb-4">Engaging climbing classes for kids and teens, focused on safety, balance, and problem-solving skills.</p>
                                     <div class="mt-auto">

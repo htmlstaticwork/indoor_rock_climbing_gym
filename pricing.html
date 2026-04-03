@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans | Summit Ascent Memberships</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <style>
+        @media (max-width: 767px) {
+            .comparison-scroll-wrap {
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 0.75rem;
+                border-radius: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(15, 23, 42, 0.45);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+                scrollbar-width: thin;
+                scrollbar-color: rgba(59, 130, 246, 0.75) rgba(255, 255, 255, 0.08);
+            }
+
+            .comparison-scroll-wrap::-webkit-scrollbar {
+                height: 8px;
+            }
+
+            .comparison-scroll-wrap::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.08);
+                border-radius: 999px;
+            }
+
+            .comparison-scroll-wrap::-webkit-scrollbar-thumb {
+                background: linear-gradient(90deg, rgba(59, 130, 246, 0.85), rgba(14, 165, 233, 0.85));
+                border-radius: 999px;
+            }
+
+            .comparison-scroll-wrap .pricing-comparison-table {
+                min-width: 720px;
+                margin-bottom: 0;
+            }
+
+            .comparison-scroll-wrap .pricing-comparison-table th,
+            .comparison-scroll-wrap .pricing-comparison-table td {
+                white-space: nowrap;
+                word-break: normal;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -52,12 +97,9 @@
 
                         <!-- Toggles -->
                         <li class="nav-item ms-lg-3">
-                            <div class="form-check form-switch p-0 m-0">
-                                <input class="form-check-input ms-0" type="checkbox" id="theme-toggle" role="switch">
-                                <label class="form-check-label ms-1 d-none d-lg-inline" for="theme-toggle">
-                                    <i class="bi bi-moon-stars"></i>
-                                </label>
-                            </div>
+                            <button class="btn btn-sm btn-outline-secondary theme-toggle-btn" id="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
                         </li>
                         <li class="nav-item ms-lg-2">
                             <button class="btn btn-sm btn-outline-secondary" id="rtl-toggle">RTL</button>
@@ -148,7 +190,7 @@
                     <span class="text-primary fw-bold text-uppercase ls-2 small mb-2 d-block">CHOOSE YOUR GRIP</span>
                     <h2 class="display-5 fw-bold text-uppercase text-white">THE BETA COMPARISON</h2>
                 </div>
-                <div class="table-responsive">
+                <div class="table-responsive comparison-scroll-wrap">
                     <table class="table table-dark table-borderless align-middle pricing-comparison-table bg-transparent">
                         <thead>
                             <tr class="border-bottom border-secondary">
