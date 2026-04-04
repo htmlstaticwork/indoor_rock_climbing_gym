@@ -112,11 +112,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 6. Active Link Highlighter
-    const navLinks = document.querySelectorAll('.nav-link');
-    const currentPath = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+    const normalizePath = (href) => {
+        if (!href || href === '#') return null;
+        const basename = href.split('/').pop();
+        return basename ? basename.split('?')[0].split('#')[0] : null;
+    };
+
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
+        const href = normalizePath(link.getAttribute('href'));
+        if (href && href === currentPath) {
             link.classList.add('active');
+
+            const dropdownMenu = link.closest('.dropdown-menu');
+            if (dropdownMenu) {
+                const dropdownToggle = dropdownMenu.closest('.nav-item')?.querySelector('.dropdown-toggle');
+                dropdownToggle?.classList.add('active');
+            }
         }
     });
 });

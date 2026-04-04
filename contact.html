@@ -349,6 +349,17 @@
             margin-bottom: 0;
         }
 
+        @media (min-width: 768px) and (max-width: 991px) {
+            .pre-faq-section .row > div:nth-child(3) {
+                display: flex;
+                justify-content: center;
+            }
+
+            .pre-faq-section .pre-faq-card {
+                width: min(360px, 100%);
+            }
+        }
+
         /* ── Social icon fix: light mode (outside dark footer) ── */
         [data-theme="light"] .footer-social {
             background: rgba(59, 130, 246, 0.08);

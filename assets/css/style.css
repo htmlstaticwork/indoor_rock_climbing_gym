@@ -182,6 +182,22 @@ COMPONENTS
     transform: translateY(-8px);
 }
 
+.blog-sidebar .card-premium {
+    background-color: rgba(15, 23, 42, 0.96);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #f8fafc;
+}
+
+.blog-sidebar .card-premium h5,
+.blog-sidebar .card-premium a,
+.blog-sidebar .card-premium p {
+    color: inherit;
+}
+
+.blog-sidebar .card-premium p {
+    color: rgba(248, 250, 252, 0.75);
+}
+
 /* Sticky Navbar */
 .navbar-sticky {
     position: fixed;
@@ -222,6 +238,43 @@ body.has-fixed-navbar {
     color: #ffffff !important;
 }
 
+.navbar-sticky .navbar-toggler-icon {
+    border-radius: 50%;
+    border: 1px solid rgba(15, 23, 42, 0.2);
+    background-color: rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="dark"] .navbar-sticky .navbar-toggler-icon {
+    filter: invert(0.95);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] .offcanvas {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .offcanvas .offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .offcanvas .offcanvas-body {
+    padding-top: 1rem;
+}
+
+[data-theme="dark"] .offcanvas .navbar-brand,
+[data-theme="dark"] .offcanvas .nav-link,
+[data-theme="dark"] .offcanvas .dropdown-item,
+[data-theme="dark"] .offcanvas .theme-toggle-btn {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .offcanvas .nav-link:hover,
+[data-theme="dark"] .offcanvas .dropdown-item:hover {
+    color: #38bdf8;
+}
+
 .navbar-sticky .nav-link:hover,
 .navbar-sticky .nav-link.active {
     color: var(--sky-blue) !important;
@@ -241,6 +294,12 @@ body.has-fixed-navbar {
 .navbar-sticky .dropdown-item:focus {
     background-color: rgba(59, 130, 246, 0.08);
     color: var(--primary-color);
+}
+
+.navbar-sticky .dropdown-item.active {
+    color: var(--sky-blue);
+    font-weight: 600;
+    background-color: rgba(14, 165, 233, 0.12);
 }
 
 [data-theme="dark"] .navbar-sticky .dropdown-menu {
@@ -539,6 +598,21 @@ MODERN UTILITIES
     background-color: rgba(var(--bg-light-rgb), 0.15) !important;
 }
 
+.topic-grid > div:nth-child(4) {
+    transition: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .topic-grid > div:nth-child(4) {
+        display: flex;
+        justify-content: center;
+    }
+
+    .topic-grid > div:nth-child(4) .card-premium {
+        width: min(320px, 100%);
+    }
+}
+
 .text-info { color: #06b6d4 !important; }
 .text-success { color: #22c55e !important; }
 
@@ -616,4 +690,43 @@ PRICING PAGE CUSTOM STYLES
 
 [data-theme="dark"] .blog-hero {
     background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('../images/climbing-bouldering-hq.png');
+}
+
+.blog-feature-badge-wrap {
+    max-width: max-content;
+}
+
+.blog-feature-badge {
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 767px) {
+    .blog-feature-badge-wrap {
+        padding: 0.75rem;
+    }
+    .blog-feature-badge {
+        font-size: 0.65rem;
+        padding: 0.35rem 0.95rem;
+    }
+}
+
+[data-theme="dark"] .blog-page .text-dark {
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .blog-page .text-muted {
+    color: rgba(248, 250, 252, 0.85) !important;
+}
+
+[data-theme="dark"] .blog-page h2,
+[data-theme="dark"] .blog-page h3,
+[data-theme="dark"] .blog-page h4,
+[data-theme="dark"] .blog-page h5 {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .blog-page .topic-card .card-premium {
+    background-color: rgba(15, 23, 42, 0.75);
+    border-color: rgba(255, 255, 255, 0.08);
 }
