@@ -1037,6 +1037,16 @@
     .pro-shop-section ul.list-unstyled li {
         justify-content: flex-start;
     }
+
+    .pro-shop-section .pro-shop-grid {
+        justify-items: center;
+    }
+
+    .pro-shop-section .pro-shop-grid .product-card:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 360px;
+    }
 }
 
 /* ======================

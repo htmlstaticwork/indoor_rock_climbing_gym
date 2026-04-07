@@ -270,6 +270,10 @@ body.has-fixed-navbar {
     color: #f8fafc;
 }
 
+[data-theme="dark"] .offcanvas .text-dark {
+    color: #f8fafc !important;
+}
+
 [data-theme="dark"] .offcanvas .nav-link:hover,
 [data-theme="dark"] .offcanvas .dropdown-item:hover {
     color: #38bdf8;
