@@ -145,15 +145,24 @@ COMPONENTS
 }
 
 .theme-toggle-btn {
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    min-width: 44px;
+    width: 34px;
+    height: 34px;
+    padding: 0 !important;
+    min-width: 34px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition-fast);
+}
+
+.navbar-nav .btn.btn-sm {
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .theme-toggle-btn i {
