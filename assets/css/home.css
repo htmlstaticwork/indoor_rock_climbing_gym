@@ -189,8 +189,10 @@
 }
 
 .hero-cta-group .hero-cta.secondary {
-    background: rgba(255,255,255,0.12);
-    border-color: rgba(255,255,255,0.35);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-color: rgba(255, 255, 255, 0.4);
     color: #fff;
 }
 
@@ -808,36 +810,40 @@
     }
 }
 
-/* ======================
-   OFFCANVAS CUSTOM STYLES (ENHANCEMENTS)
-   ====================== */
-.offcanvas {
-    background-color: var(--bg-light);
-    border-left: 1px solid var(--border-color);
-}
-.offcanvas-header {
-    background-color: var(--white);
-    padding: 1.5rem;
-}
-.offcanvas-body {
-    padding: 1.5rem;
-}
-.offcanvas .nav-link {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.1rem;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--border-color);
-    width: 100%;
-    text-align: left;
-}
-.offcanvas .nav-link:last-child {
-    border-bottom: none;
-}
-.offcanvas .dropdown-menu {
-    border: none;
-    background: transparent;
-    box-shadow: none;
-    padding-left: 1rem;
+@media (max-width: 991px) {
+    /* ======================
+       OFFCANVAS CUSTOM STYLES (ENHANCEMENTS)
+       ====================== */
+    .offcanvas {
+        background-color: var(--bg-light);
+        border-left: 1px solid var(--border-color);
+    }
+    .offcanvas-header {
+        background-color: var(--white);
+        padding: 1.5rem;
+    }
+    .offcanvas-body {
+        padding: 1.5rem;
+    }
+    .offcanvas .nav-link {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.1rem;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border-color);
+        width: 100%;
+        text-align: left;
+    }
+    .offcanvas .nav-link:last-child {
+        border-bottom: none;
+    }
+    /* Mobile-only dropdown styles inside offcanvas */
+    .offcanvas-body .dropdown-menu {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        padding-left: 1rem;
+        text-align: left;
+    }
 }
 
 @media (max-width: 767px) {

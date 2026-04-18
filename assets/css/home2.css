@@ -34,6 +34,7 @@
 .hero-v2-content {
     position: relative;
     z-index: 5;
+    padding-top: 100px;
 }
 
 .glass-card {
@@ -61,6 +62,7 @@
 
 .insight-card {
     background: var(--white);
+    color: var(--text-dark) !important;
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 30px;
@@ -167,7 +169,7 @@
 
 .leader-row {
     display: grid;
-    grid-template-columns: 60px 1fr 100px 120px;
+    grid-template-columns: 50px 1fr 80px 100px;
     padding: 20px;
     border-bottom: 1px solid var(--border-color);
     align-items: center;
@@ -215,6 +217,48 @@
     .leader-header div:last-child {
         justify-self: end;
         text-align: right;
+    }
+}
+
+/* Tighter columns for very narrow screens (360px) */
+@media (max-width: 480px) {
+    .leader-row,
+    .leader-header {
+        grid-template-columns: 36px 1fr 52px 64px;
+        padding: 14px 12px;
+        gap: 6px;
+    }
+
+    .leader-rank {
+        font-size: 1rem;
+    }
+
+    .leader-row > div:nth-child(2) .rounded-circle {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .leader-row > div:nth-child(2) {
+        gap: 6px !important;
+    }
+
+    .leader-name {
+        font-size: 0.8rem;
+        word-break: break-word;
+    }
+
+    .leader-row > div:nth-child(3) {
+        font-size: 0.8rem;
+    }
+
+    .leader-points {
+        font-size: 0.82rem;
+    }
+
+    /* Shrink the header label text */
+    .leader-header {
+        font-size: 0.65rem !important;
+        letter-spacing: 0 !important;
     }
 }
 
@@ -315,9 +359,42 @@
 
 @media (max-width: 768px) {
     .hero-v2-content {
-        padding-top: 90px;
+        padding-top: 110px;
     }
     .hero-v2-title {
         margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-v2-content {
+        padding-top: 90px;
+    }
+
+    .hero-v2-title {
+        font-size: clamp(2rem, 10vw, 3rem);
+        line-height: 1;
+        margin-top: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .glass-card {
+        padding: 20px 16px;
+        border-radius: 16px;
+    }
+
+    /* Badge: prevent it from stretching full-width */
+    .hero-v2 .hero-badge {
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+        font-size: 0.7rem;
+        padding: 6px 12px !important;
+    }
+
+    /* Reduce lead paragraph margin */
+    .hero-v2 .lead {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem !important;
     }
 }

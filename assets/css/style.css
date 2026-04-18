@@ -171,6 +171,7 @@ COMPONENTS
 /* Cards */
 .card-premium {
     background-color: var(--white);
+    color: var(--text-dark) !important;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: var(--spacing-md);
@@ -288,7 +289,33 @@ body.has-fixed-navbar {
     background-color: var(--white);
     border: 1px solid var(--border-color);
     box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
+    margin-top: 10px !important;
 }
+
+@media (min-width: 992px) {
+    .navbar-sticky .nav-item.dropdown {
+        position: relative;
+    }
+    /* Align dropdown flush under the toggle link, centered */
+    .navbar-sticky .navbar-nav .dropdown-menu {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        min-width: 200px;
+        margin-top: 10px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* Extra nudge at exactly the 1024px breakpoint where the nav is tight */
+@media (min-width: 992px) and (max-width: 1099px) {
+    .navbar-sticky .navbar-nav .dropdown-menu {
+        left: 0 !important;
+        transform: translateX(0) !important;
+    }
+}
+
 
 .navbar-sticky .dropdown-item {
     color: var(--text-dark);
@@ -301,9 +328,9 @@ body.has-fixed-navbar {
 }
 
 .navbar-sticky .dropdown-item.active {
-    color: var(--sky-blue);
-    font-weight: 600;
-    background-color: rgba(14, 165, 233, 0.12);
+    color: var(--primary-color);
+    font-weight: 700;
+    background-color: rgba(59, 130, 246, 0.1);
 }
 
 [data-theme="dark"] .navbar-sticky .dropdown-menu {
@@ -316,7 +343,8 @@ body.has-fixed-navbar {
 }
 
 [data-theme="dark"] .navbar-sticky .dropdown-item:hover,
-[data-theme="dark"] .navbar-sticky .dropdown-item:focus {
+[data-theme="dark"] .navbar-sticky .dropdown-item:focus,
+[data-theme="dark"] .navbar-sticky .dropdown-item.active {
     background-color: rgba(59, 130, 246, 0.14);
     color: #ffffff;
 }
@@ -363,7 +391,43 @@ RTL SUPPORT
     text-align: right;
 }
 
+/* RTL Spacing Utilities Fixes */
+[dir="rtl"] .me-1 { margin-left: .25rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-2 { margin-left: .5rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
+
+[dir="rtl"] .ms-1 { margin-right: .25rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-2 { margin-right: .5rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
+
+[dir="rtl"] .pe-1 { padding-left: .25rem !important; padding-right: 0 !important; }
+[dir="rtl"] .pe-2 { padding-left: .5rem !important; padding-right: 0 !important; }
+[dir="rtl"] .pe-3 { padding-left: 1rem !important; padding-right: 0 !important; }
+
+[dir="rtl"] .ps-1 { padding-right: .25rem !important; padding-left: 0 !important; }
+[dir="rtl"] .ps-2 { padding-right: .5rem !important; padding-left: 0 !important; }
+[dir="rtl"] .ps-3 { padding-right: 1rem !important; padding-left: 0 !important; }
+
+
+/* Extra fixes */
+
+[dir="rtl"] .me-auto {
+    margin-left: auto !important;
+    margin-right: initial !important;
+}
+
+[dir="rtl"] .text-end {
+    text-align: left !important;
+}
+
+[dir="rtl"] .text-start {
+    text-align: right !important;
+}
+
 [dir="rtl"] .ms-auto {
+
     margin-right: auto !important;
     margin-left: initial !important;
 }
@@ -749,4 +813,25 @@ PRICING PAGE CUSTOM STYLES
 [data-theme="dark"] .blog-page .topic-card .card-premium {
     background-color: rgba(15, 23, 42, 0.75);
     border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Blog newsletter form: stack input + button vertically on small screens */
+@media (max-width: 480px) {
+    .newsletter-form-large .input-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .newsletter-form-large .input-group .form-control {
+        border-radius: 8px !important;
+        width: 100%;
+    }
+
+    .newsletter-form-large .input-group .btn {
+        border-radius: 8px !important;
+        width: 100%;
+        border-top-left-radius: 8px !important;
+        border-bottom-left-radius: 8px !important;
+    }
 }
